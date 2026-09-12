@@ -38,6 +38,7 @@ class FixtureEndpointTests(unittest.TestCase):
         finally:
             server._la_liga_fixtures = original
 
+        self.assertEqual(response["competition"], "La Liga")
         self.assertEqual([fixture.id for fixture in response["fixtures"]], ["upcoming"])
 
     def test_la_liga_endpoint_filters_requested_round(self):

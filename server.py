@@ -34,6 +34,10 @@ def _select_fixtures(league: str) -> list[Fixture]:
     return _la_liga_fixtures if league == "la-liga" else _fixtures
 
 
+def _competition_name(league: str) -> str:
+    return "La Liga" if league == "la-liga" else "Premier League"
+
+
 @app.get("/healthz")
 def healthz():
     return {
@@ -64,7 +68,7 @@ def fixtures(
     round: int | None = Query(default=None, ge=1),
 ):
     items = filter_fixtures(_select_fixtures(league), upcoming_only=upcoming_only, round=round)
-    return {"season": "2026-27", "league": league, "fixtures": items}
+    return {"season": "2026-27", "league": league, "competition": _competition_name(league), "fixtures": items}
 
 
 @app.get("/predictions")
