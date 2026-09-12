@@ -134,7 +134,7 @@ export default function App() {
       </section>
 
       <section className="card fixtures">
-        <h2>{round ? `La Liga matchweek ${round} fixtures` : "La Liga upcoming fixtures"}</h2>
+        <h2>La Liga upcoming fixtures</h2>
         {!laLigaFixtures.length && !status && <p className="muted">No upcoming La Liga fixtures are cached yet.</p>}
         {laLigaFixtures.map((fixture) => <UpcomingFixtureRow key={fixture.id} fixture={fixture} />)}
       </section>
