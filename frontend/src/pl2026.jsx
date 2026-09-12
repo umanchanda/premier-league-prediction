@@ -107,7 +107,7 @@ export default function App() {
   }
 
   const heading = useMemo(
-    () => round ? `Premier League round ${round} predictions` : "All upcoming fixtures",
+    () => round ? `Premier League round ${round} predictions` : "Premier League upcoming predictions",
     [round],
   );
 
