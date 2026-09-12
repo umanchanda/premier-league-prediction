@@ -1,10 +1,15 @@
 import unittest
 
-from fixtures import Fixture, normalize_sportmonks_fixtures
+from fixtures import Fixture, SportMonksFixtureSource, normalize_sportmonks_fixtures
 from model import PremierLeagueModel
 
 
 class FixtureNormalizationTests(unittest.TestCase):
+    def test_sportmonks_source_accepts_league_and_season(self):
+        source = SportMonksFixtureSource(api_key="test", season_id=27965, league_id=564)
+        self.assertEqual(source.season_id, 27965)
+        self.assertEqual(source.league_id, 564)
+
     def test_extracts_sportmonks_fixture(self):
         payload = {
             "data": [{

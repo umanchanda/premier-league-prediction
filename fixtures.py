@@ -11,6 +11,7 @@ from typing import Any
 
 SEASON = "2026/2027"
 CACHE_PATH = Path(__file__).parent / "data" / "fixtures-2026-27.json"
+LA_LIGA_CACHE_PATH = Path(__file__).parent / "data" / "la-liga-fixtures-2026-27.json"
 
 SPORTMONKS_URL = "https://api.sportmonks.com/v3/football/fixtures"
 
@@ -90,9 +91,15 @@ def normalize_sportmonks_fixtures(payload: dict[str, Any]) -> list[Fixture]:
 
 
 class SportMonksFixtureSource:
-    def __init__(self, api_key: str | None = None, season_id: int = 28083) -> None:
+    def __init__(
+        self,
+        api_key: str | None = None,
+        season_id: int = 28083,
+        league_id: int = 8,
+    ) -> None:
         self.api_key = api_key or os.getenv("MONKS_KEY") or os.getenv("SPORTMONKS_KEY")
         self.season_id = season_id
+        self.league_id = league_id
 
     def fetch(self) -> list[Fixture]:
         if not self.api_key:
@@ -109,7 +116,7 @@ class SportMonksFixtureSource:
                 SPORTMONKS_URL,
                 params={
                     "api_token": self.api_key,
-                    "filters": f"fixtureSeasons:{self.season_id}",
+                    "filters": f"fixtureSeasons:{self.season_id};fixtureLeagues:{self.league_id}",
                     "include": "participants;scores;round",
                     "page": page,
                 },

@@ -39,6 +39,10 @@ The sync stores `data/fixtures-2026-27.json`, allowing predictions to remain
 available without another provider request. Open the frontend through the
 FastAPI server after building it, or point Vite's `VITE_API_URL` at the API.
 
+La Liga 2026-27 fixtures are also cached in
+`data/la-liga-fixtures-2026-27.json` using SportMonks league ID `564` and
+season ID `27965`.
+
 ## API
 
 - `POST /fixtures/sync` fetches and caches the 2026-27 fixture list.
