@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import "./styles.css";
 
 const API_BASE = import.meta.env.VITE_API_URL ?? "";
@@ -48,7 +48,17 @@ export default function App() {
   const [syncing, setSyncing] = useState(false);
   const [round, setRound] = useState("");
 
-  async function load(selectedRound = round) {
+  const applyFixtureData = useCallback((predictionPayload, laLigaPayload) => {
+    setPredictions(predictionPayload.predictions);
+    setLaLigaFixtures(laLigaPayload.fixtures);
+    setStatus(
+      predictionPayload.predictions.length || laLigaPayload.fixtures.length
+        ? ""
+        : "No upcoming fixtures are cached yet.",
+    );
+  }, []);
+
+  const load = useCallback(async (selectedRound = round) => {
     const query = selectedRound ? `?round=${selectedRound}` : "";
     const fixtureQuery = `${query ? `${query}&` : "?"}league=la-liga&upcoming_only=true`;
     const [predictionsResponse, laLigaResponse] = await Promise.all([
@@ -61,18 +71,22 @@ export default function App() {
       predictionsResponse.json(),
       laLigaResponse.json(),
     ]);
-    setPredictions(predictionPayload.predictions);
-    setLaLigaFixtures(laLigaPayload.fixtures);
-    setStatus(
-      predictionPayload.predictions.length || laLigaPayload.fixtures.length
-        ? ""
-        : "No upcoming fixtures are cached yet.",
-    );
-  }
+    return { predictionPayload, laLigaPayload };
+  }, [round]);
 
   useEffect(() => {
-    load().catch((error) => setStatus(error.message));
-  }, [round]);
+    let cancelled = false;
+    load()
+      .then(({ predictionPayload, laLigaPayload }) => {
+        if (!cancelled) applyFixtureData(predictionPayload, laLigaPayload);
+      })
+      .catch((error) => {
+        if (!cancelled) setStatus(error.message);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [applyFixtureData, load]);
 
   async function sync() {
     setSyncing(true);
@@ -81,7 +95,8 @@ export default function App() {
       const response = await fetch(`${API_BASE}/fixtures/sync`, { method: "POST" });
       const payload = await response.json();
       if (!response.ok) throw new Error(payload.detail ?? "Fixture sync failed");
-      await load();
+      const { predictionPayload, laLigaPayload } = await load();
+      applyFixtureData(predictionPayload, laLigaPayload);
     } catch (error) {
       setStatus(error.message);
     } finally {
