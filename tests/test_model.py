@@ -1,6 +1,6 @@
 import unittest
 
-from fixtures import Fixture, normalize_fixtures, normalize_sportmonks_fixtures
+from fixtures import Fixture, normalize_sportmonks_fixtures
 from model import PremierLeagueModel
 
 
@@ -22,43 +22,6 @@ class FixtureNormalizationTests(unittest.TestCase):
         self.assertEqual(fixtures[0].id, "123")
         self.assertEqual(fixtures[0].home, "Arsenal")
         self.assertEqual(fixtures[0].round, 1)
-
-    def test_extracts_premier_league_fixture_from_team_payload(self):
-        payload = {
-            "fixtures": {
-                "allFixtures": {
-                    "fixtures": [{
-                        "id": 123,
-                        "homeTeamName": "Arsenal",
-                        "awayTeamName": "Chelsea",
-                        "leagueName": "Premier League",
-                        "seasonName": "2026/2027",
-                        "status": {"utcTime": "2026-08-15T14:00:00.000Z"},
-                        "round": 1,
-                    }]
-                }
-            }
-        }
-        fixtures = normalize_fixtures(payload)
-        self.assertEqual(len(fixtures), 1)
-        self.assertEqual(fixtures[0].home, "Arsenal")
-        self.assertEqual(fixtures[0].round, 1)
-
-    def test_ignores_placeholder_scores_for_unfinished_fixture(self):
-        payload = {
-            "fixtures": [{
-                "id": 456,
-                "home": {"name": "Arsenal", "score": 0},
-                "away": {"name": "Chelsea", "score": 0},
-                "tournament": {"name": "Premier League"},
-                "season": "2026/2027",
-                "status": {"utcTime": "2027-01-02T15:00:00.000Z", "finished": False},
-            }]
-        }
-        fixtures = normalize_fixtures(payload)
-        self.assertEqual(len(fixtures), 1)
-        self.assertFalse(fixtures[0].played)
-
 
 class PredictionTests(unittest.TestCase):
     def test_predicts_a_valid_scoreline_and_probabilities(self):

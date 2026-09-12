@@ -5,6 +5,12 @@
     "node": "24.x"
   },
   "scripts": {
+    "frontend:install": "npm --prefix frontend install",
+    "build": "npm --prefix frontend run build",
+    "start": "python3 -m uvicorn server:app --reload --port 8000",
+    "sync": "curl -X POST http://localhost:8000/fixtures/sync",
+    "test": "python3 -m unittest discover -s tests -v",
+    "lint": "npm --prefix frontend run lint",
     "heroku-postbuild": "cd frontend && npm install --include=dev && npm run build"
   }
 }

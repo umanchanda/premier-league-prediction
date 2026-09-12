@@ -7,14 +7,11 @@ import os
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 SEASON = "2026/2027"
 CACHE_PATH = Path(__file__).parent / "data" / "fixtures-2026-27.json"
 
-# FotMob IDs may be supplied as FOTMOB_TEAM_IDS=9825,8456,... . Keeping the
-# default empty avoids silently treating an out-of-date club list as official.
-DEFAULT_TEAM_IDS: tuple[int, ...] = ()
 SPORTMONKS_URL = "https://api.sportmonks.com/v3/football/fixtures"
 
 
@@ -31,39 +28,6 @@ class Fixture:
     @property
     def played(self) -> bool:
         return self.home_score is not None and self.away_score is not None
-
-
-def configured_team_ids() -> list[int]:
-    raw = os.getenv("FOTMOB_TEAM_IDS", "")
-    if not raw.strip():
-        return list(DEFAULT_TEAM_IDS)
-    try:
-        return [int(team_id.strip()) for team_id in raw.split(",") if team_id.strip()]
-    except ValueError as exc:
-        raise ValueError("FOTMOB_TEAM_IDS must be a comma-separated list of numeric FotMob IDs") from exc
-
-
-def _first(mapping: dict[str, Any], *keys: str) -> Any:
-    for key in keys:
-        value: Any = mapping
-        for segment in key.split("."):
-            if not isinstance(value, dict):
-                value = None
-                break
-            value = value.get(segment)
-        if value not in (None, ""):
-            return value
-    return None
-
-
-def _walk(value: Any) -> Iterable[dict[str, Any]]:
-    if isinstance(value, dict):
-        yield value
-        for child in value.values():
-            yield from _walk(child)
-    elif isinstance(value, list):
-        for child in value:
-            yield from _walk(child)
 
 
 def _to_iso(value: Any) -> str | None:
@@ -123,66 +87,6 @@ def normalize_sportmonks_fixtures(payload: dict[str, Any]) -> list[Fixture]:
             away_score=current_scores.get("away"),
         ))
     return sorted(fixtures, key=lambda fixture: fixture.kickoff or "")
-
-
-def normalize_fixtures(payload: dict[str, Any], season: str = SEASON) -> list[Fixture]:
-    """Extract fixture-shaped entries from a PyFotMob team response."""
-    fixtures: dict[str, Fixture] = {}
-    for item in _walk(payload):
-        home = _first(item, "homeTeamName", "home_name")
-        away = _first(item, "awayTeamName", "away_name")
-        if not isinstance(home, str) or not isinstance(away, str):
-            home_team, away_team = item.get("home"), item.get("away")
-            home = home or (home_team.get("name") if isinstance(home_team, dict) else None)
-            away = away or (away_team.get("name") if isinstance(away_team, dict) else None)
-        if not isinstance(home, str) or not isinstance(away, str):
-            continue
-
-        competition = str(_first(item, "leagueName", "competitionName", "tournamentName", "tournament.name") or "")
-        date = _to_iso(_first(item, "status.utcTime", "utcTime", "startDate", "time"))
-        season_label = str(_first(item, "season", "seasonName") or "")
-        if competition and "premier league" not in competition.lower():
-            continue
-        if season not in season_label and (not date or not date.startswith("2026") and not date.startswith("2027")):
-            continue
-
-        fixture_id = str(_first(item, "id", "matchId", "match_id") or f"{home}|{away}|{date}")
-        status = item.get("status")
-        finished = not isinstance(status, dict) or status.get("finished") is not False
-        home_score = _score(_first(item, "homeScore.current", "homeScore", "home_score", "home.score")) if finished else None
-        away_score = _score(_first(item, "awayScore.current", "awayScore", "away_score", "away.score")) if finished else None
-        fixtures[fixture_id] = Fixture(
-            id=fixture_id,
-            home=home,
-            away=away,
-            kickoff=date,
-            round=_score(_first(item, "round", "roundName")),
-            home_score=home_score,
-            away_score=away_score,
-        )
-    return sorted(fixtures.values(), key=lambda fixture: fixture.kickoff or "")
-
-
-class FotMobFixtureSource:
-    def __init__(self, team_ids: list[int] | None = None) -> None:
-        self.team_ids = configured_team_ids() if team_ids is None else team_ids
-
-    def fetch(self) -> list[Fixture]:
-        if not self.team_ids:
-            raise RuntimeError(
-                "Set FOTMOB_TEAM_IDS to the 20 Premier League club IDs before syncing fixtures."
-            )
-        try:
-            from pyfotmob import Team
-        except ModuleNotFoundError as exc:
-            raise RuntimeError(
-                "PyFotMob is not installed. Run: python -m pip install --no-deps pyfotmob==0.0.3"
-            ) from exc
-        fixtures: dict[str, Fixture] = {}
-        for team_id in self.team_ids:
-            for fixture in normalize_fixtures(Team(team_id).get()):
-                fixtures[fixture.id] = fixture
-        return sorted(fixtures.values(), key=lambda fixture: fixture.kickoff or "")
 
 
 class SportMonksFixtureSource:

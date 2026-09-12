@@ -12,9 +12,8 @@ It also returns home-win, draw, and away-win probabilities.
 ## Set up
 
 ```powershell
-python -m pip install -r requirements.txt
-# PyFotMob 0.0.3 declares an incompatible unused Pydantic dependency.
-python -m pip install --no-deps pyfotmob==0.0.3
+python3 -m pip install -r requirements.txt
+npm run frontend:install
 ```
 
 Create `.env` with your SportMonks token:
@@ -26,13 +25,14 @@ MONKS_KEY=your-sportmonks-api-token
 ## Run
 
 ```powershell
-python -m uvicorn server:app --reload --port 8000
+npm run build
+npm run start
 ```
 
 Then sync current fixtures:
 
 ```powershell
-curl -X POST http://localhost:8000/fixtures/sync
+npm run sync
 ```
 
 The sync stores `data/fixtures-2026-27.json`, allowing predictions to remain
@@ -50,5 +50,6 @@ FastAPI server after building it, or point Vite's `VITE_API_URL` at the API.
 ## Validate
 
 ```powershell
-python -m unittest discover -s tests -v
+npm run test
+npm run lint
 ```
