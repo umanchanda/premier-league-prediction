@@ -60,9 +60,12 @@ export default function App() {
 
   const load = useCallback(async (selectedRound = round) => {
     const query = selectedRound ? `?round=${selectedRound}` : "";
+    const laLigaQuery = selectedRound
+      ? `?league=la-liga&upcoming_only=true&round=${selectedRound}`
+      : "?league=la-liga&upcoming_only=true";
     const [predictionsResponse, laLigaResponse] = await Promise.all([
       fetch(`${API_BASE}/predictions${query}`),
-      fetch(`${API_BASE}/fixtures?league=la-liga&upcoming_only=true`),
+      fetch(`${API_BASE}/fixtures${laLigaQuery}`),
     ]);
     if (!predictionsResponse.ok) throw new Error("Predictions are unavailable");
     if (!laLigaResponse.ok) throw new Error("La Liga fixtures are unavailable");
@@ -104,7 +107,7 @@ export default function App() {
   }
 
   const heading = useMemo(
-    () => round ? `Matchweek ${round} predictions` : "All upcoming fixtures",
+    () => round ? `Premier League round ${round} predictions` : "All upcoming fixtures",
     [round],
   );
 
@@ -117,10 +120,10 @@ export default function App() {
       </header>
 
       <section className="card controls">
-        <label htmlFor="round">Matchweek</label>
+        <label htmlFor="round">Round</label>
         <select id="round" value={round} onChange={(event) => setRound(event.target.value)}>
           <option value="">All upcoming fixtures</option>
-          {Array.from({ length: 38 }, (_, index) => <option key={index + 1} value={index + 1}>Matchweek {index + 1}</option>)}
+          {Array.from({ length: 38 }, (_, index) => <option key={index + 1} value={index + 1}>Round {index + 1}</option>)}
         </select>
         <button className="btn primary" onClick={sync} disabled={syncing}>
           {syncing ? "Syncing fixtures..." : "Sync fixtures from SportMonks"}
@@ -134,7 +137,7 @@ export default function App() {
       </section>
 
       <section className="card fixtures">
-        <h2>La Liga upcoming fixtures</h2>
+        <h2>{round ? `La Liga round ${round} fixtures` : "La Liga upcoming fixtures"}</h2>
         {!laLigaFixtures.length && !status && <p className="muted">No upcoming La Liga fixtures are cached yet.</p>}
         {laLigaFixtures.map((fixture) => <UpcomingFixtureRow key={fixture.id} fixture={fixture} />)}
       </section>
