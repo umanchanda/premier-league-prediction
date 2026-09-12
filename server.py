@@ -9,11 +9,12 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-from fixtures import SportMonksFixtureSource, load_cache, save_cache
+from fixtures import LA_LIGA_CACHE_PATH, Fixture, SportMonksFixtureSource, filter_fixtures, load_cache, save_cache
 from model import PremierLeagueModel
 
 load_dotenv()
 _fixtures = load_cache()
+_la_liga_fixtures = load_cache(LA_LIGA_CACHE_PATH)
 
 
 @asynccontextmanager
@@ -29,9 +30,22 @@ def _predictions() -> list[dict]:
     return PremierLeagueModel(_fixtures).predict_upcoming(_fixtures)
 
 
+def _select_fixtures(league: str) -> list[Fixture]:
+    return _la_liga_fixtures if league == "la-liga" else _fixtures
+
+
+def _competition_name(league: str) -> str:
+    return "La Liga" if league == "la-liga" else "Premier League"
+
+
 @app.get("/healthz")
 def healthz():
-    return {"service": app.title, "season": "2026-27", "cached_fixtures": len(_fixtures)}
+    return {
+        "service": app.title,
+        "season": "2026-27",
+        "cached_fixtures": len(_fixtures),
+        "cached_la_liga_fixtures": len(_la_liga_fixtures),
+    }
 
 
 @app.post("/fixtures/sync")
@@ -48,8 +62,13 @@ def sync_fixtures():
 
 
 @app.get("/fixtures")
-def fixtures():
-    return {"season": "2026-27", "fixtures": _fixtures}
+def fixtures(
+    league: str = Query(default="premier-league", pattern="^(premier-league|la-liga)$"),
+    upcoming_only: bool = Query(default=False),
+    round: int | None = Query(default=None, ge=1),
+):
+    items = filter_fixtures(_select_fixtures(league), upcoming_only=upcoming_only, round=round)
+    return {"season": "2026-27", "league": league, "competition": _competition_name(league), "fixtures": items}
 
 
 @app.get("/predictions")

@@ -46,7 +46,8 @@ season ID `27965`.
 ## API
 
 - `POST /fixtures/sync` fetches and caches the 2026-27 fixture list.
-- `GET /fixtures` returns the cached fixtures.
+- `GET /fixtures` returns cached fixtures for the requested league, with optional `league`, `upcoming_only`, and `round` query parameters.
+- `GET /fixtures?league=la-liga&upcoming_only=true` returns cached upcoming La Liga fixtures.
 - `GET /predictions` returns a predicted scoreline for every unplayed fixture.
 - `GET /predictions?round=1` filters predictions to a matchweek.
 - `GET /healthz` reports the cache state.
