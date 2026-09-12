@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-from fixtures import LA_LIGA_CACHE_PATH, Fixture, SportMonksFixtureSource, load_cache, save_cache
+from fixtures import LA_LIGA_CACHE_PATH, Fixture, SportMonksFixtureSource, filter_fixtures, load_cache, save_cache
 from model import PremierLeagueModel
 
 load_dotenv()
@@ -32,13 +32,6 @@ def _predictions() -> list[dict]:
 
 def _select_fixtures(league: str) -> list[Fixture]:
     return _la_liga_fixtures if league == "la-liga" else _fixtures
-
-
-def _filter_fixtures(fixtures: list[Fixture], upcoming_only: bool, round: int | None) -> list[Fixture]:
-    items = [fixture for fixture in fixtures if not upcoming_only or not fixture.played]
-    if round is not None:
-        items = [fixture for fixture in items if fixture.round == round]
-    return items
 
 
 @app.get("/healthz")
@@ -70,7 +63,7 @@ def fixtures(
     upcoming_only: bool = Query(default=False),
     round: int | None = Query(default=None, ge=1, le=38),
 ):
-    items = _filter_fixtures(_select_fixtures(league), upcoming_only=upcoming_only, round=round)
+    items = filter_fixtures(_select_fixtures(league), upcoming_only=upcoming_only, round=round)
     return {"season": "2026-27", "league": league, "fixtures": items}
 
 

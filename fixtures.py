@@ -142,3 +142,10 @@ def load_cache(path: Path = CACHE_PATH) -> list[Fixture]:
     if not path.exists():
         return []
     return [Fixture(**item) for item in json.loads(path.read_text(encoding="utf-8"))]
+
+
+def filter_fixtures(fixtures: list[Fixture], upcoming_only: bool = False, round: int | None = None) -> list[Fixture]:
+    items = [fixture for fixture in fixtures if not upcoming_only or not fixture.played]
+    if round is not None:
+        items = [fixture for fixture in items if fixture.round == round]
+    return items
