@@ -24,6 +24,17 @@ class FixtureNormalizationTests(unittest.TestCase):
         self.assertEqual(fixtures[0].round, 1)
 
 class PredictionTests(unittest.TestCase):
+    def test_team_strengths_produce_different_scorelines(self):
+        fixtures = [
+            Fixture("a", "Arsenal", "Chelsea", None, 1, 4, 0),
+            Fixture("b", "Chelsea", "Arsenal", None, 2, 0, 3),
+            Fixture("c", "Arsenal", "Chelsea", None, 3, 3, 0),
+            Fixture("next-home", "Arsenal", "Chelsea", "2026-09-20", 4),
+            Fixture("next-away", "Chelsea", "Arsenal", "2026-09-21", 4),
+        ]
+        predictions = PremierLeagueModel(fixtures).predict_upcoming(fixtures)
+        self.assertGreater(len({prediction["predicted_score"] for prediction in predictions}), 1)
+
     def test_predicts_a_valid_scoreline_and_probabilities(self):
         fixtures = [
             Fixture("played", "Arsenal", "Chelsea", None, 1, 2, 0),

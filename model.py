@@ -10,7 +10,8 @@ from fixtures import Fixture
 
 LEAGUE_HOME_GOALS = 1.55
 LEAGUE_AWAY_GOALS = 1.25
-PRIOR_MATCHES = 5.0
+# Keep an early-season league baseline without flattening every matchup to 1-1.
+PRIOR_MATCHES = 2.0
 
 
 @dataclass(frozen=True)
