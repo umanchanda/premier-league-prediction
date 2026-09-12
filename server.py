@@ -61,7 +61,7 @@ def sync_fixtures():
 def fixtures(
     league: str = Query(default="premier-league", pattern="^(premier-league|la-liga)$"),
     upcoming_only: bool = Query(default=False),
-    round: int | None = Query(default=None, ge=1, le=38),
+    round: int | None = Query(default=None, ge=1),
 ):
     items = filter_fixtures(_select_fixtures(league), upcoming_only=upcoming_only, round=round)
     return {"season": "2026-27", "league": league, "fixtures": items}
