@@ -60,10 +60,9 @@ export default function App() {
 
   const load = useCallback(async (selectedRound = round) => {
     const query = selectedRound ? `?round=${selectedRound}` : "";
-    const fixtureQuery = `${query ? `${query}&` : "?"}league=la-liga&upcoming_only=true`;
     const [predictionsResponse, laLigaResponse] = await Promise.all([
       fetch(`${API_BASE}/predictions${query}`),
-      fetch(`${API_BASE}/fixtures${fixtureQuery}`),
+      fetch(`${API_BASE}/fixtures?league=la-liga&upcoming_only=true`),
     ]);
     if (!predictionsResponse.ok) throw new Error("Predictions are unavailable");
     if (!laLigaResponse.ok) throw new Error("La Liga fixtures are unavailable");
