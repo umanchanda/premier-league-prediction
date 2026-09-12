@@ -27,19 +27,47 @@ function FixtureRow({ prediction }) {
   );
 }
 
+function UpcomingFixtureRow({ fixture }) {
+  return (
+    <article className="match-item">
+      <div>
+        <strong>{fixture.home}</strong> <span className="muted">vs</span> <strong>{fixture.away}</strong>
+        {fixture.kickoff && <div className="muted small">{new Date(fixture.kickoff).toLocaleString()}</div>}
+      </div>
+      <div className="fixture-round muted small">
+        {fixture.round ? `Matchweek ${fixture.round}` : "Upcoming fixture"}
+      </div>
+    </article>
+  );
+}
+
 export default function App() {
   const [predictions, setPredictions] = useState([]);
+  const [laLigaFixtures, setLaLigaFixtures] = useState([]);
   const [status, setStatus] = useState("Loading cached predictions...");
   const [syncing, setSyncing] = useState(false);
   const [round, setRound] = useState("");
 
   async function load(selectedRound = round) {
     const query = selectedRound ? `?round=${selectedRound}` : "";
-    const response = await fetch(`${API_BASE}/predictions${query}`);
-    if (!response.ok) throw new Error("Predictions are unavailable");
-    const payload = await response.json();
-    setPredictions(payload.predictions);
-    setStatus(payload.predictions.length ? "" : "No upcoming fixtures are cached yet.");
+    const fixtureQuery = `${query ? `${query}&` : "?"}league=la-liga&upcoming_only=true`;
+    const [predictionsResponse, laLigaResponse] = await Promise.all([
+      fetch(`${API_BASE}/predictions${query}`),
+      fetch(`${API_BASE}/fixtures${fixtureQuery}`),
+    ]);
+    if (!predictionsResponse.ok) throw new Error("Predictions are unavailable");
+    if (!laLigaResponse.ok) throw new Error("La Liga fixtures are unavailable");
+    const [predictionPayload, laLigaPayload] = await Promise.all([
+      predictionsResponse.json(),
+      laLigaResponse.json(),
+    ]);
+    setPredictions(predictionPayload.predictions);
+    setLaLigaFixtures(laLigaPayload.fixtures);
+    setStatus(
+      predictionPayload.predictions.length || laLigaPayload.fixtures.length
+        ? ""
+        : "No upcoming fixtures are cached yet.",
+    );
   }
 
   useEffect(() => {
@@ -70,8 +98,8 @@ export default function App() {
     <main className="prediction-desk">
       <header>
         <p className="eyebrow">SportMonks data · Poisson score model</p>
-        <h1>Premier League 2026–27 predictions</h1>
-        <p className="muted">Predicted scorelines use completed season results to estimate each club&apos;s attack and defence.</p>
+        <h1>2026–27 football fixtures</h1>
+        <p className="muted">Premier League predictions use completed season results to estimate each club&apos;s attack and defence, and La Liga upcoming fixtures are listed below.</p>
       </header>
 
       <section className="card controls">
@@ -89,6 +117,12 @@ export default function App() {
         <h2>{heading}</h2>
         {status && <p className="muted">{status}</p>}
         {predictions.map((prediction) => <FixtureRow key={prediction.fixture_id} prediction={prediction} />)}
+      </section>
+
+      <section className="card fixtures">
+        <h2>{round ? `La Liga matchweek ${round} fixtures` : "La Liga upcoming fixtures"}</h2>
+        {!laLigaFixtures.length && !status && <p className="muted">No upcoming La Liga fixtures are cached yet.</p>}
+        {laLigaFixtures.map((fixture) => <UpcomingFixtureRow key={fixture.id} fixture={fixture} />)}
       </section>
     </main>
   );

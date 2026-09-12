@@ -70,3 +70,8 @@ body {
   gap: 8px;
   min-width: 155px;
 }
+
+.fixture-round {
+  min-width: 155px;
+  text-align: right;
+}
