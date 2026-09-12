@@ -1,7 +1,7 @@
 # Premier League 2026-27 Predictor
 
 A FastAPI and React app that fetches Premier League fixtures through
-[PyFotMob](https://pypi.org/project/pyfotmob/) and predicts a scoreline for
+[SportMonks](https://www.sportmonks.com/) and predicts a scoreline for
 every upcoming match.
 
 The model learns separate home/away attacking and defensive rates from completed
@@ -17,15 +17,11 @@ python -m pip install -r requirements.txt
 python -m pip install --no-deps pyfotmob==0.0.3
 ```
 
-Create `.env` with the FotMob IDs for the 20 clubs in this season:
+Create `.env` with your SportMonks token:
 
 ```dotenv
-FOTMOB_TEAM_IDS=9825,8455,...
+MONKS_KEY=your-sportmonks-api-token
 ```
-
-The published PyFotMob 0.0.3 wheel omits an internal `services.data` module.
-This repository includes a minimal compatibility module so its documented
-`Team(id).get()` interface works unchanged.
 
 ## Run
 
@@ -36,7 +32,7 @@ python -m uvicorn server:app --reload --port 8000
 Then sync current fixtures:
 
 ```powershell
-Invoke-RestMethod -Method Post http://localhost:8000/fixtures/sync
+curl -X POST http://localhost:8000/fixtures/sync
 ```
 
 The sync stores `data/fixtures-2026-27.json`, allowing predictions to remain

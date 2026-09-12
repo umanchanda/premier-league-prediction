@@ -1,10 +1,28 @@
 import unittest
 
-from fixtures import Fixture, normalize_fixtures
+from fixtures import Fixture, normalize_fixtures, normalize_sportmonks_fixtures
 from model import PremierLeagueModel
 
 
 class FixtureNormalizationTests(unittest.TestCase):
+    def test_extracts_sportmonks_fixture(self):
+        payload = {
+            "data": [{
+                "id": 123,
+                "starting_at": "2026-08-15 14:00:00",
+                "participants": [
+                    {"id": 1, "name": "Arsenal", "meta": {"location": "home"}},
+                    {"id": 2, "name": "Chelsea", "meta": {"location": "away"}},
+                ],
+                "round": {"name": "1"},
+                "scores": [],
+            }],
+        }
+        fixtures = normalize_sportmonks_fixtures(payload)
+        self.assertEqual(fixtures[0].id, "123")
+        self.assertEqual(fixtures[0].home, "Arsenal")
+        self.assertEqual(fixtures[0].round, 1)
+
     def test_extracts_premier_league_fixture_from_team_payload(self):
         payload = {
             "fixtures": {

@@ -1,4 +1,4 @@
-"""FastAPI service for PyFotMob Premier League fixture predictions."""
+"""FastAPI service for SportMonks Premier League fixture predictions."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-from fixtures import FotMobFixtureSource, load_cache, save_cache
+from fixtures import SportMonksFixtureSource, load_cache, save_cache
 from model import PremierLeagueModel
 
 load_dotenv()
@@ -38,12 +38,12 @@ def healthz():
 def sync_fixtures():
     global _fixtures
     try:
-        _fixtures = FotMobFixtureSource().fetch()
+        _fixtures = SportMonksFixtureSource().fetch()
         save_cache(_fixtures)
     except (RuntimeError, ValueError) as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except Exception as exc:
-        raise HTTPException(status_code=502, detail=f"PyFotMob fixture sync failed: {exc}") from exc
+        raise HTTPException(status_code=502, detail=f"SportMonks fixture sync failed: {exc}") from exc
     return {"season": "2026-27", "fixtures": len(_fixtures)}
 
 

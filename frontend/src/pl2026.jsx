@@ -69,7 +69,7 @@ export default function App() {
   return (
     <main className="prediction-desk">
       <header>
-        <p className="eyebrow">FotMob data · Poisson score model</p>
+        <p className="eyebrow">SportMonks data · Poisson score model</p>
         <h1>Premier League 2026–27 predictions</h1>
         <p className="muted">Predicted scorelines use completed season results to estimate each club&apos;s attack and defence.</p>
       </header>
@@ -81,7 +81,7 @@ export default function App() {
           {Array.from({ length: 38 }, (_, index) => <option key={index + 1} value={index + 1}>Matchweek {index + 1}</option>)}
         </select>
         <button className="btn primary" onClick={sync} disabled={syncing}>
-          {syncing ? "Syncing fixtures..." : "Sync fixtures from FotMob"}
+          {syncing ? "Syncing fixtures..." : "Sync fixtures from SportMonks"}
         </button>
       </section>
 

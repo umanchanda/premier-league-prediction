@@ -1,9 +1,4 @@
-"""Premier League fixture ingestion through PyFotMob.
-
-PyFotMob exposes fixtures through each club's team payload.  The package does
-not currently provide a league-fixtures class, so this adapter combines the
-club schedules, removes duplicate matches, and keeps only the requested season.
-"""
+"""Premier League fixture ingestion through SportMonks."""
 
 from __future__ import annotations
 
@@ -20,6 +15,7 @@ CACHE_PATH = Path(__file__).parent / "data" / "fixtures-2026-27.json"
 # FotMob IDs may be supplied as FOTMOB_TEAM_IDS=9825,8456,... . Keeping the
 # default empty avoids silently treating an out-of-date club list as official.
 DEFAULT_TEAM_IDS: tuple[int, ...] = ()
+SPORTMONKS_URL = "https://api.sportmonks.com/v3/football/fixtures"
 
 
 @dataclass(frozen=True)
@@ -87,6 +83,48 @@ def _score(value: Any) -> int | None:
         return None
 
 
+def normalize_sportmonks_fixtures(payload: dict[str, Any]) -> list[Fixture]:
+    """Convert a SportMonks fixture response into the app's fixture model."""
+    fixtures: list[Fixture] = []
+    for item in payload.get("data", []):
+        if not isinstance(item, dict):
+            continue
+        participants = item.get("participants", [])
+        home = next((team.get("name") for team in participants
+                     if isinstance(team, dict) and team.get("meta", {}).get("location") == "home"), None)
+        away = next((team.get("name") for team in participants
+                     if isinstance(team, dict) and team.get("meta", {}).get("location") == "away"), None)
+        if not isinstance(home, str) or not isinstance(away, str):
+            continue
+
+        scores = item.get("scores", [])
+        current_scores: dict[str, int | None] = {}
+        participant_locations = {
+            team.get("id"): team.get("meta", {}).get("location")
+            for team in participants if isinstance(team, dict)
+        }
+        for score in scores:
+            if not isinstance(score, dict) or score.get("description") not in (None, "CURRENT"):
+                continue
+            location = participant_locations.get(score.get("participant_id"))
+            if location:
+                score_data = score.get("score")
+                goals = score_data.get("goals") if isinstance(score_data, dict) else score.get("goals")
+                current_scores[location] = _score(goals)
+
+        round_data = item.get("round")
+        fixtures.append(Fixture(
+            id=str(item.get("id")),
+            home=home,
+            away=away,
+            kickoff=_to_iso(item.get("starting_at")),
+            round=_score(round_data.get("name")) if isinstance(round_data, dict) else None,
+            home_score=current_scores.get("home"),
+            away_score=current_scores.get("away"),
+        ))
+    return sorted(fixtures, key=lambda fixture: fixture.kickoff or "")
+
+
 def normalize_fixtures(payload: dict[str, Any], season: str = SEASON) -> list[Fixture]:
     """Extract fixture-shaped entries from a PyFotMob team response."""
     fixtures: dict[str, Fixture] = {}
@@ -145,6 +183,43 @@ class FotMobFixtureSource:
             for fixture in normalize_fixtures(Team(team_id).get()):
                 fixtures[fixture.id] = fixture
         return sorted(fixtures.values(), key=lambda fixture: fixture.kickoff or "")
+
+
+class SportMonksFixtureSource:
+    def __init__(self, api_key: str | None = None, season_id: int = 28083) -> None:
+        self.api_key = api_key or os.getenv("MONKS_KEY") or os.getenv("SPORTMONKS_KEY")
+        self.season_id = season_id
+
+    def fetch(self) -> list[Fixture]:
+        if not self.api_key:
+            raise RuntimeError("Set MONKS_KEY to a SportMonks API token before syncing fixtures.")
+        try:
+            import requests
+        except ModuleNotFoundError as exc:
+            raise RuntimeError("Requests is not installed. Run: python -m pip install -r requirements.txt") from exc
+
+        fixtures: list[Fixture] = []
+        page = 1
+        while True:
+            response = requests.get(
+                SPORTMONKS_URL,
+                params={
+                    "api_token": self.api_key,
+                    "filters": f"fixtureSeasons:{self.season_id}",
+                    "include": "participants;scores;round",
+                    "page": page,
+                },
+                timeout=30,
+            )
+            response.raise_for_status()
+            payload = response.json()
+            fixtures.extend(normalize_sportmonks_fixtures(payload))
+            pagination = payload.get("pagination", {})
+            if not pagination.get("has_more", pagination.get("has_more_page", False)):
+                break
+            page += 1
+
+        return sorted(fixtures, key=lambda fixture: fixture.kickoff or "")
 
 
 def save_cache(fixtures: list[Fixture], path: Path = CACHE_PATH) -> None:
