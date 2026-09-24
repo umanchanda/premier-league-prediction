@@ -56,6 +56,7 @@ season ID `27965`.
 - `POST /fixtures/sync` fetches and caches the 2026-27 fixture list.
 - `POST /fixtures/sync?league=la-liga` syncs the La Liga cache; Premier League is the default.
 - `GET /fixtures?league=la-liga` returns the selected league's cached fixtures.
+- `GET /fixtures?league=la-liga&upcoming_only=true&round=1` filters cached fixtures.
 - `GET /predictions` returns predicted scorelines for every unplayed fixture.
 - `GET /predictions?league=la-liga&round=1` filters a league's predictions to a matchweek.
 - `GET /predictions/{fixture_id}/heatmap?league=la-liga` returns a selected fixture's score probability matrix.
