@@ -19,7 +19,7 @@ npm run frontend:install
 Create `.env` with your SportMonks token:
 
 ```dotenv
-MONKS_KEY=your-sportmonks-api-token
+SPORTSMONKS_KEY=your-sportmonks-api-token
 ```
 
 ## Run
@@ -35,6 +35,14 @@ Then sync current fixtures:
 npm run sync
 ```
 
+You can also fetch fixtures directly from the command line. Premier League is
+the default; use `--league la-liga` for the La Liga cache:
+
+```powershell
+python3 fixtures.py
+python3 fixtures.py --league la-liga
+```
+
 The sync stores `data/fixtures-2026-27.json`, allowing predictions to remain
 available without another provider request. Open the frontend through the
 FastAPI server after building it, or point Vite's `VITE_API_URL` at the API.
@@ -46,10 +54,11 @@ season ID `27965`.
 ## API
 
 - `POST /fixtures/sync` fetches and caches the 2026-27 fixture list.
-- `GET /fixtures` returns cached fixtures for the requested league, with optional `league`, `upcoming_only`, and `round` query parameters.
-- `GET /fixtures?league=la-liga&upcoming_only=true` returns cached upcoming La Liga fixtures.
-- `GET /predictions` returns a predicted scoreline for every unplayed fixture.
-- `GET /predictions?round=1` filters predictions to a matchweek.
+- `POST /fixtures/sync?league=la-liga` syncs the La Liga cache; Premier League is the default.
+- `GET /fixtures?league=la-liga` returns the selected league's cached fixtures.
+- `GET /predictions` returns predicted scorelines for every unplayed fixture.
+- `GET /predictions?league=la-liga&round=1` filters a league's predictions to a matchweek.
+- `GET /predictions/{fixture_id}/heatmap?league=la-liga` returns a selected fixture's score probability matrix.
 - `GET /healthz` reports the cache state.
 
 ## Validate

@@ -275,8 +275,8 @@
     "away": "Fulham",
     "kickoff": "2026-09-12 14:00:00",
     "round": 4,
-    "home_score": null,
-    "away_score": null
+    "home_score": 0,
+    "away_score": 0
   },
   {
     "id": "19722169",
@@ -284,8 +284,8 @@
     "away": "Ipswich Town",
     "kickoff": "2026-09-12 14:00:00",
     "round": 4,
-    "home_score": null,
-    "away_score": null
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "id": "19722171",
@@ -293,8 +293,8 @@
     "away": "Hull City",
     "kickoff": "2026-09-12 14:00:00",
     "round": 4,
-    "home_score": null,
-    "away_score": null
+    "home_score": 2,
+    "away_score": 2
   },
   {
     "id": "19722172",
@@ -302,8 +302,8 @@
     "away": "Nottingham Forest",
     "kickoff": "2026-09-12 14:00:00",
     "round": 4,
-    "home_score": null,
-    "away_score": null
+    "home_score": 1,
+    "away_score": 2
   },
   {
     "id": "19722173",
@@ -311,8 +311,8 @@
     "away": "Brentford",
     "kickoff": "2026-09-12 14:00:00",
     "round": 4,
-    "home_score": null,
-    "away_score": null
+    "home_score": 2,
+    "away_score": 2
   },
   {
     "id": "19722164",
@@ -320,8 +320,8 @@
     "away": "Everton",
     "kickoff": "2026-09-12 16:30:00",
     "round": 4,
-    "home_score": null,
-    "away_score": null
+    "home_score": 0,
+    "away_score": 0
   },
   {
     "id": "19722165",
@@ -329,8 +329,8 @@
     "away": "Arsenal",
     "kickoff": "2026-09-12 19:00:00",
     "round": 4,
-    "home_score": null,
-    "away_score": null
+    "home_score": 0,
+    "away_score": 2
   },
   {
     "id": "19722170",
@@ -338,8 +338,8 @@
     "away": "Brighton & Hove Albion",
     "kickoff": "2026-09-13 13:00:00",
     "round": 4,
-    "home_score": null,
-    "away_score": null
+    "home_score": 0,
+    "away_score": 5
   },
   {
     "id": "19722166",
@@ -347,8 +347,8 @@
     "away": "Manchester City",
     "kickoff": "2026-09-13 15:30:00",
     "round": 4,
-    "home_score": null,
-    "away_score": null
+    "home_score": 0,
+    "away_score": 1
   },
   {
     "id": "19722168",
@@ -356,8 +356,8 @@
     "away": "Newcastle United",
     "kickoff": "2026-09-14 19:00:00",
     "round": 4,
-    "home_score": null,
-    "away_score": null
+    "home_score": 4,
+    "away_score": 1
   },
   {
     "id": "19722162",
@@ -365,8 +365,8 @@
     "away": "Chelsea",
     "kickoff": "2026-09-18 19:00:00",
     "round": 5,
-    "home_score": null,
-    "away_score": null
+    "home_score": 3,
+    "away_score": 0
   },
   {
     "id": "19722154",
@@ -374,8 +374,8 @@
     "away": "Aston Villa",
     "kickoff": "2026-09-19 11:30:00",
     "round": 5,
-    "home_score": null,
-    "away_score": null
+    "home_score": 2,
+    "away_score": 3
   },
   {
     "id": "19722156",
@@ -383,8 +383,8 @@
     "away": "Hull City",
     "kickoff": "2026-09-19 14:00:00",
     "round": 5,
-    "home_score": null,
-    "away_score": null
+    "home_score": 2,
+    "away_score": 1
   },
   {
     "id": "19722160",
@@ -392,8 +392,8 @@
     "away": "Ipswich Town",
     "kickoff": "2026-09-19 14:00:00",
     "round": 5,
-    "home_score": null,
-    "away_score": null
+    "home_score": 1,
+    "away_score": 0
   },
   {
     "id": "19722161",
@@ -401,8 +401,8 @@
     "away": "Arsenal",
     "kickoff": "2026-09-19 14:00:00",
     "round": 5,
-    "home_score": null,
-    "away_score": null
+    "home_score": 3,
+    "away_score": 0
   },
   {
     "id": "19722155",
@@ -410,8 +410,8 @@
     "away": "Coventry City",
     "kickoff": "2026-09-19 16:30:00",
     "round": 5,
-    "home_score": null,
-    "away_score": null
+    "home_score": 0,
+    "away_score": 1
   },
   {
     "id": "19722157",
@@ -419,8 +419,8 @@
     "away": "Sunderland",
     "kickoff": "2026-09-20 13:00:00",
     "round": 5,
-    "home_score": null,
-    "away_score": null
+    "home_score": 5,
+    "away_score": 3
   },
   {
     "id": "19722158",
@@ -428,8 +428,8 @@
     "away": "Crystal Palace",
     "kickoff": "2026-09-20 13:00:00",
     "round": 5,
-    "home_score": null,
-    "away_score": null
+    "home_score": 0,
+    "away_score": 0
   },
   {
     "id": "19722163",
@@ -437,8 +437,8 @@
     "away": "Liverpool",
     "kickoff": "2026-09-20 13:00:00",
     "round": 5,
-    "home_score": null,
-    "away_score": null
+    "home_score": 0,
+    "away_score": 1
   },
   {
     "id": "19722159",
@@ -446,8 +446,8 @@
     "away": "Manchester United",
     "kickoff": "2026-09-20 15:30:00",
     "round": 5,
-    "home_score": null,
-    "away_score": null
+    "home_score": 1,
+    "away_score": 1
   },
   {
     "id": "19722153",
@@ -810,28 +810,10 @@
     "away_score": null
   },
   {
-    "id": "19722104",
-    "home": "Sunderland",
-    "away": "Chelsea",
-    "kickoff": "2026-11-07 15:00:00",
-    "round": 10,
-    "home_score": null,
-    "away_score": null
-  },
-  {
-    "id": "19722105",
-    "home": "Nottingham Forest",
-    "away": "Manchester City",
-    "kickoff": "2026-11-07 15:00:00",
-    "round": 10,
-    "home_score": null,
-    "away_score": null
-  },
-  {
-    "id": "19722106",
-    "home": "Manchester United",
-    "away": "Aston Villa",
-    "kickoff": "2026-11-07 15:00:00",
+    "id": "19722110",
+    "home": "Everton",
+    "away": "Coventry City",
+    "kickoff": "2026-11-06 20:00:00",
     "round": 10,
     "home_score": null,
     "away_score": null
@@ -840,16 +822,7 @@
     "id": "19722107",
     "home": "Leeds United",
     "away": "Tottenham Hotspur",
-    "kickoff": "2026-11-07 15:00:00",
-    "round": 10,
-    "home_score": null,
-    "away_score": null
-  },
-  {
-    "id": "19722108",
-    "home": "Ipswich Town",
-    "away": "AFC Bournemouth",
-    "kickoff": "2026-11-07 15:00:00",
+    "kickoff": "2026-11-07 12:30:00",
     "round": 10,
     "home_score": null,
     "away_score": null
@@ -858,33 +831,6 @@
     "id": "19722109",
     "home": "Fulham",
     "away": "Newcastle United",
-    "kickoff": "2026-11-07 15:00:00",
-    "round": 10,
-    "home_score": null,
-    "away_score": null
-  },
-  {
-    "id": "19722110",
-    "home": "Everton",
-    "away": "Coventry City",
-    "kickoff": "2026-11-07 15:00:00",
-    "round": 10,
-    "home_score": null,
-    "away_score": null
-  },
-  {
-    "id": "19722111",
-    "home": "Crystal Palace",
-    "away": "Liverpool",
-    "kickoff": "2026-11-07 15:00:00",
-    "round": 10,
-    "home_score": null,
-    "away_score": null
-  },
-  {
-    "id": "19722112",
-    "home": "Brighton & Hove Albion",
-    "away": "Brentford",
     "kickoff": "2026-11-07 15:00:00",
     "round": 10,
     "home_score": null,
@@ -900,20 +846,56 @@
     "away_score": null
   },
   {
-    "id": "19722094",
-    "home": "Tottenham Hotspur",
-    "away": "Ipswich Town",
-    "kickoff": "2026-11-21 15:00:00",
-    "round": 11,
+    "id": "19722105",
+    "home": "Nottingham Forest",
+    "away": "Manchester City",
+    "kickoff": "2026-11-07 17:30:00",
+    "round": 10,
     "home_score": null,
     "away_score": null
   },
   {
-    "id": "19722095",
-    "home": "Newcastle United",
-    "away": "Arsenal",
-    "kickoff": "2026-11-21 15:00:00",
-    "round": 11,
+    "id": "19722104",
+    "home": "Sunderland",
+    "away": "Chelsea",
+    "kickoff": "2026-11-08 14:00:00",
+    "round": 10,
+    "home_score": null,
+    "away_score": null
+  },
+  {
+    "id": "19722108",
+    "home": "Ipswich Town",
+    "away": "AFC Bournemouth",
+    "kickoff": "2026-11-08 14:00:00",
+    "round": 10,
+    "home_score": null,
+    "away_score": null
+  },
+  {
+    "id": "19722111",
+    "home": "Crystal Palace",
+    "away": "Liverpool",
+    "kickoff": "2026-11-08 14:00:00",
+    "round": 10,
+    "home_score": null,
+    "away_score": null
+  },
+  {
+    "id": "19722112",
+    "home": "Brighton & Hove Albion",
+    "away": "Brentford",
+    "kickoff": "2026-11-08 14:00:00",
+    "round": 10,
+    "home_score": null,
+    "away_score": null
+  },
+  {
+    "id": "19722106",
+    "home": "Manchester United",
+    "away": "Aston Villa",
+    "kickoff": "2026-11-08 16:30:00",
+    "round": 10,
     "home_score": null,
     "away_score": null
   },
@@ -921,24 +903,15 @@
     "id": "19722096",
     "home": "Manchester City",
     "away": "Fulham",
-    "kickoff": "2026-11-21 15:00:00",
+    "kickoff": "2026-11-21 12:30:00",
     "round": 11,
     "home_score": null,
     "away_score": null
   },
   {
-    "id": "19722097",
-    "home": "Liverpool",
-    "away": "Manchester United",
-    "kickoff": "2026-11-21 15:00:00",
-    "round": 11,
-    "home_score": null,
-    "away_score": null
-  },
-  {
-    "id": "19722098",
-    "home": "Hull City",
-    "away": "Brighton & Hove Albion",
+    "id": "19722094",
+    "home": "Tottenham Hotspur",
+    "away": "Ipswich Town",
     "kickoff": "2026-11-21 15:00:00",
     "round": 11,
     "home_score": null,
@@ -963,15 +936,6 @@
     "away_score": null
   },
   {
-    "id": "19722101",
-    "home": "Brentford",
-    "away": "Everton",
-    "kickoff": "2026-11-21 15:00:00",
-    "round": 11,
-    "home_score": null,
-    "away_score": null
-  },
-  {
     "id": "19722102",
     "home": "Aston Villa",
     "away": "Sunderland",
@@ -990,11 +954,38 @@
     "away_score": null
   },
   {
-    "id": "19722084",
-    "home": "Sunderland",
-    "away": "Tottenham Hotspur",
-    "kickoff": "2026-11-28 15:00:00",
-    "round": 12,
+    "id": "19722095",
+    "home": "Newcastle United",
+    "away": "Arsenal",
+    "kickoff": "2026-11-21 17:30:00",
+    "round": 11,
+    "home_score": null,
+    "away_score": null
+  },
+  {
+    "id": "19722098",
+    "home": "Hull City",
+    "away": "Brighton & Hove Albion",
+    "kickoff": "2026-11-22 14:00:00",
+    "round": 11,
+    "home_score": null,
+    "away_score": null
+  },
+  {
+    "id": "19722097",
+    "home": "Liverpool",
+    "away": "Manchester United",
+    "kickoff": "2026-11-22 16:30:00",
+    "round": 11,
+    "home_score": null,
+    "away_score": null
+  },
+  {
+    "id": "19722101",
+    "home": "Brentford",
+    "away": "Everton",
+    "kickoff": "2026-11-23 20:00:00",
+    "round": 11,
     "home_score": null,
     "away_score": null
   },
@@ -1002,7 +993,7 @@
     "id": "19722085",
     "home": "Nottingham Forest",
     "away": "Chelsea",
-    "kickoff": "2026-11-28 15:00:00",
+    "kickoff": "2026-11-27 20:00:00",
     "round": 12,
     "home_score": null,
     "away_score": null
@@ -1029,16 +1020,7 @@
     "id": "19722088",
     "home": "Ipswich Town",
     "away": "Aston Villa",
-    "kickoff": "2026-11-28 15:00:00",
-    "round": 12,
-    "home_score": null,
-    "away_score": null
-  },
-  {
-    "id": "19722089",
-    "home": "Fulham",
-    "away": "AFC Bournemouth",
-    "kickoff": "2026-11-28 15:00:00",
+    "kickoff": "2026-11-28 17:30:00",
     "round": 12,
     "home_score": null,
     "away_score": null
@@ -1047,7 +1029,25 @@
     "id": "19722090",
     "home": "Everton",
     "away": "Liverpool",
-    "kickoff": "2026-11-28 15:00:00",
+    "kickoff": "2026-11-29 12:00:00",
+    "round": 12,
+    "home_score": null,
+    "away_score": null
+  },
+  {
+    "id": "19722084",
+    "home": "Sunderland",
+    "away": "Tottenham Hotspur",
+    "kickoff": "2026-11-29 14:05:00",
+    "round": 12,
+    "home_score": null,
+    "away_score": null
+  },
+  {
+    "id": "19722089",
+    "home": "Fulham",
+    "away": "AFC Bournemouth",
+    "kickoff": "2026-11-29 14:05:00",
     "round": 12,
     "home_score": null,
     "away_score": null
@@ -1056,7 +1056,7 @@
     "id": "19722091",
     "home": "Crystal Palace",
     "away": "Hull City",
-    "kickoff": "2026-11-28 15:00:00",
+    "kickoff": "2026-11-29 14:05:00",
     "round": 12,
     "home_score": null,
     "away_score": null
@@ -1065,7 +1065,7 @@
     "id": "19722092",
     "home": "Brighton & Hove Albion",
     "away": "Newcastle United",
-    "kickoff": "2026-11-28 15:00:00",
+    "kickoff": "2026-11-29 14:05:00",
     "round": 12,
     "home_score": null,
     "away_score": null
@@ -1074,7 +1074,7 @@
     "id": "19722093",
     "home": "Arsenal",
     "away": "Manchester City",
-    "kickoff": "2026-11-28 15:00:00",
+    "kickoff": "2026-11-29 16:30:00",
     "round": 12,
     "home_score": null,
     "away_score": null

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import os
 from dataclasses import asdict, dataclass
@@ -14,6 +15,19 @@ CACHE_PATH = Path(__file__).parent / "data" / "fixtures-2026-27.json"
 LA_LIGA_CACHE_PATH = Path(__file__).parent / "data" / "la-liga-fixtures-2026-27.json"
 
 SPORTMONKS_URL = "https://api.sportmonks.com/v3/football/fixtures"
+
+
+@dataclass(frozen=True)
+class LeagueConfig:
+    season_id: int
+    league_id: int
+    cache_path: Path
+
+
+LEAGUES = {
+    "premier-league": LeagueConfig(28083, 8, CACHE_PATH),
+    "la-liga": LeagueConfig(27965, 564, LA_LIGA_CACHE_PATH),
+}
 
 
 @dataclass(frozen=True)
@@ -97,13 +111,18 @@ class SportMonksFixtureSource:
         season_id: int = 28083,
         league_id: int = 8,
     ) -> None:
-        self.api_key = api_key or os.getenv("MONKS_KEY") or os.getenv("SPORTMONKS_KEY")
+        self.api_key = (
+            api_key
+            or os.getenv("MONKS_KEY")
+            or os.getenv("SPORTMONKS_KEY")
+            or os.getenv("SPORTSMONKS_KEY")
+        )
         self.season_id = season_id
         self.league_id = league_id
 
     def fetch(self) -> list[Fixture]:
         if not self.api_key:
-            raise RuntimeError("Set MONKS_KEY to a SportMonks API token before syncing fixtures.")
+            raise RuntimeError("Set SPORTMONKS_KEY to a SportMonks API token before syncing fixtures.")
         try:
             import requests
         except ModuleNotFoundError as exc:
@@ -135,7 +154,10 @@ class SportMonksFixtureSource:
 
 def save_cache(fixtures: list[Fixture], path: Path = CACHE_PATH) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps([asdict(fixture) for fixture in fixtures], indent=2), encoding="utf-8")
+    path.write_text(
+        json.dumps([asdict(fixture) for fixture in fixtures], indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
 
 
 def load_cache(path: Path = CACHE_PATH) -> list[Fixture]:
@@ -149,3 +171,24 @@ def filter_fixtures(fixtures: list[Fixture], upcoming_only: bool = False, round:
     if round is not None:
         items = [fixture for fixture in items if fixture.round == round]
     return items
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Fetch and cache SportMonks fixtures.")
+    parser.add_argument("--league", choices=LEAGUES, default="premier-league")
+    args = parser.parse_args()
+
+    from dotenv import load_dotenv
+
+    load_dotenv()
+    config = LEAGUES[args.league]
+    fixtures = SportMonksFixtureSource(
+        season_id=config.season_id,
+        league_id=config.league_id,
+    ).fetch()
+    save_cache(fixtures, config.cache_path)
+    print(f"Synced {len(fixtures)} {args.league} fixtures to {config.cache_path}")
+
+
+if __name__ == "__main__":
+    main()
