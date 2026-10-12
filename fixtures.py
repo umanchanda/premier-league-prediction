@@ -15,6 +15,8 @@ CACHE_PATH = Path(__file__).parent / "data" / "fixtures-2026-27.json"
 LA_LIGA_CACHE_PATH = Path(__file__).parent / "data" / "la-liga-fixtures-2026-27.json"
 
 SPORTMONKS_URL = "https://api.sportmonks.com/v3/football/fixtures"
+# SportMonks fixture states whose CURRENT score is final.
+FINISHED_STATES = {"FT", "AET", "FT_PEN", "AWARDED"}
 
 
 @dataclass(frozen=True)
@@ -76,7 +78,10 @@ def normalize_sportmonks_fixtures(payload: dict[str, Any]) -> list[Fixture]:
         if not isinstance(home, str) or not isinstance(away, str):
             continue
 
-        scores = item.get("scores", [])
+        # A live match also has a CURRENT score; only count it once the match is over.
+        state = item.get("state")
+        finished = not isinstance(state, dict) or state.get("developer_name") in FINISHED_STATES
+        scores = item.get("scores", []) if finished else []
         current_scores: dict[str, int | None] = {}
         participant_locations = {
             team.get("id"): team.get("meta", {}).get("location")
@@ -136,7 +141,7 @@ class SportMonksFixtureSource:
                 params={
                     "api_token": self.api_key,
                     "filters": f"fixtureSeasons:{self.season_id};fixtureLeagues:{self.league_id}",
-                    "include": "participants;scores;round",
+                    "include": "participants;scores;round;state",
                     "page": page,
                 },
                 timeout=30,

@@ -10,6 +10,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from fixtures import LEAGUES, SportMonksFixtureSource, filter_fixtures, load_cache, save_cache
+from history import load_history
 from model import PremierLeagueModel
 
 load_dotenv()
@@ -19,6 +20,7 @@ _fixture_caches = {
 }
 _fixtures = _fixture_caches["premier-league"]
 _la_liga_fixtures = _fixture_caches["la-liga"]
+_history = {league: load_history(league) for league in LEAGUES}
 
 
 @asynccontextmanager
@@ -36,8 +38,8 @@ def _league_fixtures(league: str):
     return _la_liga_fixtures if league == "la-liga" else _fixtures
 
 
-def _predictions(fixtures: list) -> list[dict]:
-    return PremierLeagueModel(fixtures).predict_upcoming(fixtures)
+def _model(league: str, fixtures: list) -> PremierLeagueModel:
+    return PremierLeagueModel(fixtures, _history.get(league, []))
 
 
 def _competition_name(league: str) -> str:
@@ -100,8 +102,9 @@ def predictions(
     league: str = Query(default="premier-league"),
 ):
     fixtures = _league_fixtures(league)
-    items = _predictions(fixtures)
-    completed_items = PremierLeagueModel(fixtures).predict_completed(fixtures)
+    model = _model(league, fixtures)
+    items = model.predict_upcoming(fixtures)
+    completed_items = model.predict_completed(fixtures)
     if round is not None:
         items = [item for item in items if next(
             (fixture.round == round for fixture in fixtures if fixture.id == item["fixture_id"]), False
@@ -127,19 +130,9 @@ def prediction_heatmap(
     if fixture is None:
         raise HTTPException(status_code=404, detail="Fixture not found")
 
+    model = _model(league, fixtures)
     if fixture.played:
-        completed = sorted(
-            (item for item in fixtures if item.played),
-            key=lambda item: item.kickoff or "",
-        )
-        history = []
-        for item in completed:
-            if item.id == fixture.id:
-                break
-            history.append(item)
-        model = PremierLeagueModel(history)
-    else:
-        model = PremierLeagueModel(fixtures)
+        model = model.model_before(fixtures, fixture)
 
     prediction = model.predict(fixture)
     return {
