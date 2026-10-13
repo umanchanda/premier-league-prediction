@@ -1,17 +1,34 @@
-"""Poisson scoreline model trained from completed Premier League fixtures."""
+"""Poisson scoreline model fitted to recent league results.
+
+Each team gets one attacking and one defensive rating, plus a league-wide home
+advantage, fitted by weighted Poisson regression. Prior seasons are included
+with exponential time decay so early-season predictions are not based on a
+handful of games, and promoted teams start from the average rating of the teams
+they replaced. Ridge shrinkage pulls teams with little data toward average.
+"""
 
 from __future__ import annotations
 
 import math
 from collections import defaultdict
 from dataclasses import asdict, dataclass
+from datetime import date
+from typing import Iterable
+
+import numpy as np
 
 from fixtures import Fixture
 
-LEAGUE_HOME_GOALS = 1.55
-LEAGUE_AWAY_GOALS = 1.25
-# Keep an early-season league baseline without flattening every matchup to 1-1.
-PRIOR_MATCHES = 2.0
+# Only used before any results are available.
+DEFAULT_HOME_GOALS = 1.5
+DEFAULT_AWAY_GOALS = 1.2
+HALF_LIFE_DAYS = 180
+HISTORY_WINDOW_DAYS = 730
+# Ridge strength on team ratings, in units of a full-weight match.
+RATING_RIDGE = 4.0
+BASELINE_RIDGE = 1.0
+# A team that played within this many days of the latest prior result was in last season's league.
+LAST_SEASON_DAYS = 60
 
 
 @dataclass(frozen=True)
@@ -33,79 +50,147 @@ def _poisson(k: int, mean: float) -> float:
     return math.exp(-mean) * mean**k / math.factorial(k)
 
 
-class PremierLeagueModel:
-    """Fits attacking and defensive rates with shrinkage to league averages."""
+def _kickoff_date(fixture: Fixture) -> date | None:
+    try:
+        return date.fromisoformat((fixture.kickoff or "")[:10])
+    except ValueError:
+        return None
 
-    def __init__(self, fixtures: list[Fixture]) -> None:
-        completed = [fixture for fixture in fixtures if fixture.played]
-        self.home_scored: dict[str, float] = defaultdict(float)
-        self.home_conceded: dict[str, float] = defaultdict(float)
-        self.away_scored: dict[str, float] = defaultdict(float)
-        self.away_conceded: dict[str, float] = defaultdict(float)
-        self.home_matches: dict[str, int] = defaultdict(int)
-        self.away_matches: dict[str, int] = defaultdict(int)
-        for fixture in completed:
-            self.home_scored[fixture.home] += fixture.home_score or 0
-            self.home_conceded[fixture.home] += fixture.away_score or 0
-            self.away_scored[fixture.away] += fixture.away_score or 0
-            self.away_conceded[fixture.away] += fixture.home_score or 0
-            self.home_matches[fixture.home] += 1
-            self.away_matches[fixture.away] += 1
 
-    @staticmethod
-    def _smoothed(total: float, matches: int, prior: float) -> float:
-        return (total + PRIOR_MATCHES * prior) / (matches + PRIOR_MATCHES)
+class _Ratings:
+    """Weighted Poisson regression: log(goals) = baseline + home + attack - defence."""
 
-    def _venue_rate(
+    def __init__(
         self,
-        primary_total: float,
-        primary_matches: int,
-        prior: float,
-        fallback_total: float,
-        fallback_matches: int,
-        fallback_prior: float,
-    ) -> float:
-        if primary_matches:
-            return self._smoothed(primary_total, primary_matches, prior)
-        if fallback_matches:
-            adjusted_total = fallback_total * prior / fallback_prior
-            return self._smoothed(adjusted_total, fallback_matches, prior)
-        return prior
+        games: list[Fixture],
+        as_of: date | None,
+        ridge: float = RATING_RIDGE,
+        prior: dict[str, tuple[float, float]] | None = None,
+    ) -> None:
+        prior = prior or {}
+        teams = sorted({game.home for game in games} | {game.away for game in games})
+        self.index = {team: position for position, team in enumerate(teams)}
+        count = len(teams)
+        size = 2 + 2 * count
+        target = np.zeros(size)
+        target[0] = math.log(DEFAULT_AWAY_GOALS)
+        target[1] = math.log(DEFAULT_HOME_GOALS / DEFAULT_AWAY_GOALS)
+        for team, position in self.index.items():
+            target[2 + position], target[2 + count + position] = prior.get(team, (0.0, 0.0))
+        penalty = np.full(size, ridge)
+        penalty[:2] = BASELINE_RIDGE
+
+        design = np.zeros((2 * len(games), size))
+        goals = np.zeros(2 * len(games))
+        weights = np.zeros(2 * len(games))
+        for row, game in enumerate(games):
+            home, away = self.index[game.home], self.index[game.away]
+            played_on = _kickoff_date(game)
+            age = (as_of - played_on).days if as_of and played_on else 0
+            weight = 0.5 ** (max(age, 0) / HALF_LIFE_DAYS)
+            design[2 * row, [0, 1, 2 + home, 2 + count + away]] = 1
+            design[2 * row + 1, [0, 2 + away, 2 + count + home]] = 1
+            goals[2 * row], goals[2 * row + 1] = game.home_score or 0, game.away_score or 0
+            weights[2 * row] = weights[2 * row + 1] = weight
+
+        params = target.copy()
+        for _ in range(50):
+            rates = np.exp(design @ params)
+            gradient = design.T @ (weights * (goals - rates)) - penalty * (params - target)
+            hessian = design.T @ (design * (weights * rates)[:, None]) + np.diag(penalty)
+            step = np.linalg.solve(hessian, gradient)
+            params += step
+            if np.abs(step).max() < 1e-8:
+                break
+        self.params = params
+        self.count = count
+        self.prior = prior
+
+    def rating(self, team: str) -> tuple[float, float]:
+        """Return (attack, concede) log-ratings; unseen teams fall back to their prior."""
+        position = self.index.get(team)
+        if position is None:
+            return self.prior.get(team, (0.0, 0.0))
+        return float(self.params[2 + position]), float(self.params[2 + self.count + position])
 
     def expected_goals(self, home: str, away: str) -> tuple[float, float]:
-        home_attack = self._venue_rate(
-            self.home_scored[home], self.home_matches[home], LEAGUE_HOME_GOALS,
-            self.away_scored[home], self.away_matches[home], LEAGUE_AWAY_GOALS,
+        home_attack, home_concede = self.rating(home)
+        away_attack, away_concede = self.rating(away)
+        baseline, home_advantage = self.params[0], self.params[1]
+        return (
+            math.exp(baseline + home_advantage + home_attack + away_concede),
+            math.exp(baseline + away_attack + home_concede),
         )
-        away_defence = self._venue_rate(
-            self.away_conceded[away], self.away_matches[away], LEAGUE_HOME_GOALS,
-            self.home_conceded[away], self.home_matches[away], LEAGUE_AWAY_GOALS,
-        )
-        away_attack = self._venue_rate(
-            self.away_scored[away], self.away_matches[away], LEAGUE_AWAY_GOALS,
-            self.home_scored[away], self.home_matches[away], LEAGUE_HOME_GOALS,
-        )
-        home_defence = self._venue_rate(
-            self.home_conceded[home], self.home_matches[home], LEAGUE_AWAY_GOALS,
-            self.away_conceded[home], self.away_matches[home], LEAGUE_HOME_GOALS,
-        )
-        return (max(0.15, home_attack * away_defence / LEAGUE_HOME_GOALS),
-                max(0.15, away_attack * home_defence / LEAGUE_AWAY_GOALS))
+
+
+def _promoted_prior(history: list[Fixture], season_teams: set[str]) -> dict[str, tuple[float, float]]:
+    """Start promoted teams from the average end-of-season rating of the relegated teams."""
+    dated = [(game, _kickoff_date(game)) for game in history]
+    dated = [(game, played_on) for game, played_on in dated if played_on]
+    if not dated or not season_teams:
+        return {}
+    latest = max(played_on for _, played_on in dated)
+    last_season = [game for game, played_on in dated if (latest - played_on).days <= LAST_SEASON_DAYS]
+    last_season_teams = {game.home for game in last_season} | {game.away for game in last_season}
+    relegated = last_season_teams - season_teams
+    promoted = season_teams - last_season_teams
+    if not relegated or not promoted:
+        return {}
+    ratings = _Ratings([game for game, _ in dated], latest, ridge=1.0)
+    attack = sum(ratings.rating(team)[0] for team in relegated) / len(relegated)
+    concede = sum(ratings.rating(team)[1] for team in relegated) / len(relegated)
+    return {team: (attack, concede) for team in promoted}
+
+
+class PremierLeagueModel:
+    """Predicts scorelines for one league from this season's fixtures plus prior seasons."""
+
+    def __init__(
+        self,
+        fixtures: list[Fixture],
+        history: Iterable[Fixture] = (),
+        _prior: dict[str, tuple[float, float]] | None = None,
+    ) -> None:
+        self.history = [game for game in history if game.played]
+        season_teams = {fixture.home for fixture in fixtures} | {fixture.away for fixture in fixtures}
+        self.prior = _promoted_prior(self.history, season_teams) if _prior is None else _prior
+        completed = [fixture for fixture in fixtures if fixture.played]
+        dates = [played_on for game in self.history + completed if (played_on := _kickoff_date(game))]
+        as_of = max(dates) if dates else None
+        games = [
+            game for game in self.history + completed
+            if not as_of or not (played_on := _kickoff_date(game)) or (as_of - played_on).days <= HISTORY_WINDOW_DAYS
+        ]
+        self.ratings = _Ratings(games, as_of, prior=self.prior)
+
+    def expected_goals(self, home: str, away: str) -> tuple[float, float]:
+        home_mean, away_mean = self.ratings.expected_goals(home, away)
+        return max(0.15, home_mean), max(0.15, away_mean)
 
     def predict(self, fixture: Fixture, max_goals: int = 8) -> ScorelinePrediction:
         home_mean, away_mean = self.expected_goals(fixture.home, fixture.away)
         probabilities = self._score_probabilities(home_mean, away_mean, max_goals)
-        home_win = sum(probability for (home_goals, away_goals), probability in probabilities.items() if home_goals > away_goals)
-        draw = sum(probability for (home_goals, away_goals), probability in probabilities.items() if home_goals == away_goals)
-        away_win = sum(probability for (home_goals, away_goals), probability in probabilities.items() if home_goals < away_goals)
-        (home_goals, away_goals), probability = max(probabilities.items(), key=lambda item: item[1])
+        outcomes = {"home": 0.0, "draw": 0.0, "away": 0.0}
+        for (home_goals, away_goals), probability in probabilities.items():
+            outcomes[self._outcome(home_goals, away_goals)] += probability
+        # Pick the likeliest scoreline within the likeliest result, so the headline
+        # score never contradicts the favourite (e.g. 1-1 when a home win is 50%).
+        likeliest = max(outcomes, key=outcomes.get)
+        (home_goals, away_goals), probability = max(
+            ((score, probability) for score, probability in probabilities.items() if self._outcome(*score) == likeliest),
+            key=lambda item: item[1],
+        )
         return ScorelinePrediction(
             fixture_id=fixture.id, home=fixture.home, away=fixture.away, kickoff=fixture.kickoff,
             expected_home_goals=round(home_mean, 2), expected_away_goals=round(away_mean, 2),
             predicted_score=f"{home_goals}-{away_goals}",
-            home_win_probability=round(home_win, 4), draw_probability=round(draw, 4),
-            away_win_probability=round(away_win, 4), scoreline_probability=round(probability, 4),
+            home_win_probability=round(outcomes["home"], 4), draw_probability=round(outcomes["draw"], 4),
+            away_win_probability=round(outcomes["away"], 4), scoreline_probability=round(probability, 4),
         )
+
+    @staticmethod
+    def _outcome(home_goals: int, away_goals: int) -> str:
+        return "home" if home_goals > away_goals else "draw" if home_goals == away_goals else "away"
 
     @staticmethod
     def _score_probabilities(home_mean: float, away_mean: float, max_goals: int) -> dict[tuple[int, int], float]:
@@ -141,12 +226,38 @@ class PremierLeagueModel:
             (fixture for fixture in fixtures if fixture.played),
             key=lambda fixture: fixture.kickoff or "",
         )
+        by_day: dict[date | None, list[Fixture]] = defaultdict(list)
+        for fixture in completed:
+            by_day[_kickoff_date(fixture)].append(fixture)
         history: list[Fixture] = []
         predictions: list[dict] = []
-        for fixture in completed:
-            prediction = asdict(PremierLeagueModel(history).predict(fixture))
-            prediction["home_score"] = fixture.home_score
-            prediction["away_score"] = fixture.away_score
-            predictions.append(prediction)
-            history.append(fixture)
+        for day_fixtures in by_day.values():
+            # Refit once per matchday: games on the same day can't inform each other.
+            model = PremierLeagueModel(fixtures_before(fixtures, history), self.history, _prior=self.prior)
+            for fixture in day_fixtures:
+                prediction = asdict(model.predict(fixture))
+                prediction["home_score"] = fixture.home_score
+                prediction["away_score"] = fixture.away_score
+                predictions.append(prediction)
+            history.extend(day_fixtures)
         return predictions
+
+    def model_before(self, fixtures: list[Fixture], fixture: Fixture) -> PremierLeagueModel:
+        """A model fitted only on results from before the given fixture's matchday."""
+        played_on = _kickoff_date(fixture)
+        earlier = [
+            item for item in fixtures
+            if item.played and item.id != fixture.id
+            and (played_on is None or ((item_date := _kickoff_date(item)) is not None and item_date < played_on))
+        ]
+        return PremierLeagueModel(fixtures_before(fixtures, earlier), self.history, _prior=self.prior)
+
+
+def fixtures_before(fixtures: list[Fixture], played: list[Fixture]) -> list[Fixture]:
+    """Keep the full schedule (for team lists) but only the given results."""
+    played_ids = {fixture.id for fixture in played}
+    return [
+        fixture if fixture.id in played_ids or not fixture.played
+        else Fixture(fixture.id, fixture.home, fixture.away, fixture.kickoff, fixture.round)
+        for fixture in fixtures
+    ]

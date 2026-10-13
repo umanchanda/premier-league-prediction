@@ -30,6 +30,26 @@ class FixtureNormalizationTests(unittest.TestCase):
         self.assertEqual(fixtures[0].home, "Arsenal")
         self.assertEqual(fixtures[0].round, 1)
 
+    def test_live_match_score_is_not_treated_as_a_result(self):
+        participants = [
+            {"id": 1, "name": "Arsenal", "meta": {"location": "home"}},
+            {"id": 2, "name": "Chelsea", "meta": {"location": "away"}},
+        ]
+        scores = [
+            {"participant_id": 1, "description": "CURRENT", "score": {"goals": 1}},
+            {"participant_id": 2, "description": "CURRENT", "score": {"goals": 0}},
+        ]
+        payload = {"data": [
+            {"id": 1, "starting_at": "2026-08-15 14:00:00", "participants": participants,
+             "scores": scores, "state": {"developer_name": "INPLAY_1ST_HALF"}},
+            {"id": 2, "starting_at": "2026-08-16 14:00:00", "participants": participants,
+             "scores": scores, "state": {"developer_name": "FT"}},
+        ]}
+        live, finished = normalize_sportmonks_fixtures(payload)
+        self.assertFalse(live.played)
+        self.assertTrue(finished.played)
+        self.assertEqual((finished.home_score, finished.away_score), (1, 0))
+
     def test_cache_preserves_unicode_team_names(self):
         fixture = Fixture("1", "Deportivo A Coru\u00f1a", "Elche", None, 1)
         with TemporaryDirectory() as directory:
@@ -78,6 +98,52 @@ class PredictionTests(unittest.TestCase):
         self.assertRegex(predictions[0]["predicted_score"], r"^\d+-\d+$")
         self.assertEqual(predictions[0]["home_score"], 2)
         self.assertEqual(predictions[0]["away_score"], 0)
+
+    def test_prior_seasons_inform_early_predictions(self):
+        history = [
+            Fixture(f"h{week}", "Arsenal", "Chelsea", f"2026-0{1 + week % 5}-1{week % 9}", week, 3, 0)
+            for week in range(10)
+        ]
+        season = [Fixture("next", "Arsenal", "Chelsea", "2026-08-15", 1)]
+
+        without_history = PremierLeagueModel(season).predict(season[0])
+        with_history = PremierLeagueModel(season, history).predict(season[0])
+
+        self.assertGreater(with_history.home_win_probability, without_history.home_win_probability)
+
+    def test_promoted_team_starts_from_relegated_teams_rating(self):
+        history = []
+        for week in range(1, 9):
+            history += [
+                Fixture(f"a{week}", "Arsenal", "Burnley", f"2026-05-{week:02d}", week, 3, 0),
+                Fixture(f"b{week}", "Burnley", "Chelsea", f"2026-05-{week + 10:02d}", week, 0, 2),
+                Fixture(f"c{week}", "Chelsea", "Arsenal", f"2026-04-{week:02d}", week, 1, 1),
+            ]
+        season = [
+            Fixture("1", "Arsenal", "Sunderland", "2026-08-15", 1),
+            Fixture("2", "Chelsea", "Arsenal", "2026-08-22", 2),
+        ]
+
+        model = PremierLeagueModel(season, history)
+        sunderland_attack, _ = model.ratings.rating("Sunderland")
+        chelsea_attack, _ = model.ratings.rating("Chelsea")
+
+        self.assertLess(sunderland_attack, chelsea_attack)
+
+    def test_predicted_score_agrees_with_favourite(self):
+        fixtures = [
+            Fixture("played", "Arsenal", "Chelsea", "2026-08-15", 1, 2, 1),
+            Fixture("next", "Arsenal", "Chelsea", "2026-08-22", 2),
+        ]
+        prediction = PremierLeagueModel(fixtures).predict(fixtures[-1])
+        home_goals, away_goals = map(int, prediction.predicted_score.split("-"))
+        outcome = max(
+            ("home", prediction.home_win_probability),
+            ("draw", prediction.draw_probability),
+            ("away", prediction.away_win_probability),
+            key=lambda item: item[1],
+        )[0]
+        self.assertEqual(outcome, "home" if home_goals > away_goals else "draw" if home_goals == away_goals else "away")
 
     def test_score_matrix_is_normalized(self):
         fixture = Fixture("next", "Arsenal", "Chelsea", "2026-08-22", 2)

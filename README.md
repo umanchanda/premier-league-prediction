@@ -4,10 +4,13 @@ A FastAPI and React app that fetches Premier League fixtures through
 [SportMonks](https://www.sportmonks.com/) and predicts a scoreline for
 every upcoming match.
 
-The model learns separate home/away attacking and defensive rates from completed
-2026-27 fixtures, applies shrinkage to league averages early in the season, and
-uses independent Poisson goal distributions to select the most likely scoreline.
-It also returns home-win, draw, and away-win probabilities.
+The model fits one attacking and one defensive rating per team plus a
+league-wide home advantage, using weighted Poisson regression over this season's
+results and the previous two seasons (older games count less, with a 180-day
+half-life). Promoted teams start from the average rating of the teams they
+replaced, and ridge shrinkage pulls teams with little data toward average. It
+returns home-win, draw, and away-win probabilities, and the likeliest scoreline
+within the likeliest result.
 
 ## Set up
 
@@ -51,6 +54,20 @@ La Liga 2026-27 fixtures are also cached in
 `data/la-liga-fixtures-2026-27.json` using SportMonks league ID `564` and
 season ID `27965`.
 
+## Prior seasons
+
+`data/history/` holds 2024-25 and 2025-26 results for both leagues, taken from
+the public-domain [openfootball](https://github.com/openfootball/football.json)
+dataset with team names mapped to SportMonks names. Rebuild it with:
+
+```powershell
+python3 history.py
+```
+
+When a new season starts, add the finished season to `HISTORY_SEASONS` in
+`history.py` and drop the oldest, then add any new team names to
+`TEAM_ALIASES`.
+
 ## API
 
 - `POST /fixtures/sync` fetches and caches the 2026-27 fixture list.
@@ -67,4 +84,9 @@ season ID `27965`.
 ```powershell
 npm run test
 npm run lint
+python3 backtest.py
 ```
+
+`backtest.py` replays the latest prior season matchday by matchday, using only
+results available before each one, and reports RPS (lower is better), result
+accuracy, exact-score rate and points per match. Use it to judge model changes.

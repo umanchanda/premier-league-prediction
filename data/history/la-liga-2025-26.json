@@ -1,0 +1,3422 @@
+[
+  {
+    "id": "openfootball-2025-26-0",
+    "home": "Girona",
+    "away": "Rayo Vallecano",
+    "kickoff": "2025-08-15 19:00:00",
+    "round": 1,
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-1",
+    "home": "Villarreal",
+    "away": "Real Oviedo",
+    "kickoff": "2025-08-15 21:30:00",
+    "round": 1,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-2",
+    "home": "Mallorca",
+    "away": "FC Barcelona",
+    "kickoff": "2025-08-16 19:30:00",
+    "round": 1,
+    "home_score": 0,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-3",
+    "home": "Deportivo Alavés",
+    "away": "Levante",
+    "kickoff": "2025-08-16 21:30:00",
+    "round": 1,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-4",
+    "home": "Valencia",
+    "away": "Real Sociedad",
+    "kickoff": "2025-08-16 21:30:00",
+    "round": 1,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-5",
+    "home": "Celta de Vigo",
+    "away": "Getafe",
+    "kickoff": "2025-08-17 17:00:00",
+    "round": 1,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-6",
+    "home": "Athletic Club",
+    "away": "Sevilla",
+    "kickoff": "2025-08-17 19:30:00",
+    "round": 1,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-7",
+    "home": "Espanyol",
+    "away": "Atlético de Madrid",
+    "kickoff": "2025-08-17 21:30:00",
+    "round": 1,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-8",
+    "home": "Elche",
+    "away": "Real Betis",
+    "kickoff": "2025-08-18 21:00:00",
+    "round": 1,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-9",
+    "home": "Real Madrid",
+    "away": "Osasuna",
+    "kickoff": "2025-08-19 21:00:00",
+    "round": 1,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-10",
+    "home": "Real Betis",
+    "away": "Deportivo Alavés",
+    "kickoff": "2025-08-22 21:30:00",
+    "round": 2,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-11",
+    "home": "Mallorca",
+    "away": "Celta de Vigo",
+    "kickoff": "2025-08-23 17:00:00",
+    "round": 2,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-12",
+    "home": "Atlético de Madrid",
+    "away": "Elche",
+    "kickoff": "2025-08-23 19:30:00",
+    "round": 2,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-13",
+    "home": "Levante",
+    "away": "FC Barcelona",
+    "kickoff": "2025-08-23 21:30:00",
+    "round": 2,
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-14",
+    "home": "Osasuna",
+    "away": "Valencia",
+    "kickoff": "2025-08-24 17:00:00",
+    "round": 2,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-15",
+    "home": "Real Sociedad",
+    "away": "Espanyol",
+    "kickoff": "2025-08-24 19:30:00",
+    "round": 2,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-16",
+    "home": "Villarreal",
+    "away": "Girona",
+    "kickoff": "2025-08-24 19:30:00",
+    "round": 2,
+    "home_score": 5,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-17",
+    "home": "Real Oviedo",
+    "away": "Real Madrid",
+    "kickoff": "2025-08-24 21:30:00",
+    "round": 2,
+    "home_score": 0,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-18",
+    "home": "Athletic Club",
+    "away": "Rayo Vallecano",
+    "kickoff": "2025-08-25 19:30:00",
+    "round": 2,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-19",
+    "home": "Sevilla",
+    "away": "Getafe",
+    "kickoff": "2025-08-25 21:30:00",
+    "round": 2,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-20",
+    "home": "Celta de Vigo",
+    "away": "Real Betis",
+    "kickoff": "2025-08-27 21:00:00",
+    "round": 6,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-21",
+    "home": "Elche",
+    "away": "Levante",
+    "kickoff": "2025-08-29 19:30:00",
+    "round": 3,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-22",
+    "home": "Valencia",
+    "away": "Getafe",
+    "kickoff": "2025-08-29 21:30:00",
+    "round": 3,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-23",
+    "home": "Deportivo Alavés",
+    "away": "Atlético de Madrid",
+    "kickoff": "2025-08-30 17:00:00",
+    "round": 3,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-24",
+    "home": "Real Oviedo",
+    "away": "Real Sociedad",
+    "kickoff": "2025-08-30 19:00:00",
+    "round": 3,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-25",
+    "home": "Girona",
+    "away": "Sevilla",
+    "kickoff": "2025-08-30 19:30:00",
+    "round": 3,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-26",
+    "home": "Real Madrid",
+    "away": "Mallorca",
+    "kickoff": "2025-08-30 21:30:00",
+    "round": 3,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-27",
+    "home": "Celta de Vigo",
+    "away": "Villarreal",
+    "kickoff": "2025-08-31 17:00:00",
+    "round": 3,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-28",
+    "home": "Real Betis",
+    "away": "Athletic Club",
+    "kickoff": "2025-08-31 19:00:00",
+    "round": 3,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-29",
+    "home": "Espanyol",
+    "away": "Osasuna",
+    "kickoff": "2025-08-31 19:30:00",
+    "round": 3,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-30",
+    "home": "Rayo Vallecano",
+    "away": "FC Barcelona",
+    "kickoff": "2025-08-31 21:30:00",
+    "round": 3,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-31",
+    "home": "Sevilla",
+    "away": "Elche",
+    "kickoff": "2025-09-12 21:00:00",
+    "round": 4,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-32",
+    "home": "Getafe",
+    "away": "Real Oviedo",
+    "kickoff": "2025-09-13 14:00:00",
+    "round": 4,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-33",
+    "home": "Real Sociedad",
+    "away": "Real Madrid",
+    "kickoff": "2025-09-13 16:15:00",
+    "round": 4,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-34",
+    "home": "Athletic Club",
+    "away": "Deportivo Alavés",
+    "kickoff": "2025-09-13 18:30:00",
+    "round": 4,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-35",
+    "home": "Atlético de Madrid",
+    "away": "Villarreal",
+    "kickoff": "2025-09-13 21:00:00",
+    "round": 4,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-36",
+    "home": "Celta de Vigo",
+    "away": "Girona",
+    "kickoff": "2025-09-14 14:00:00",
+    "round": 4,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-37",
+    "home": "Levante",
+    "away": "Real Betis",
+    "kickoff": "2025-09-14 16:15:00",
+    "round": 4,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-38",
+    "home": "Osasuna",
+    "away": "Rayo Vallecano",
+    "kickoff": "2025-09-14 18:30:00",
+    "round": 4,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-39",
+    "home": "FC Barcelona",
+    "away": "Valencia",
+    "kickoff": "2025-09-14 21:00:00",
+    "round": 4,
+    "home_score": 6,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-40",
+    "home": "Espanyol",
+    "away": "Mallorca",
+    "kickoff": "2025-09-15 21:00:00",
+    "round": 4,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-41",
+    "home": "Real Betis",
+    "away": "Real Sociedad",
+    "kickoff": "2025-09-19 21:00:00",
+    "round": 5,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-42",
+    "home": "Girona",
+    "away": "Levante",
+    "kickoff": "2025-09-20 14:00:00",
+    "round": 5,
+    "home_score": 0,
+    "away_score": 4
+  },
+  {
+    "id": "openfootball-2025-26-43",
+    "home": "Real Madrid",
+    "away": "Espanyol",
+    "kickoff": "2025-09-20 16:15:00",
+    "round": 5,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-44",
+    "home": "Villarreal",
+    "away": "Osasuna",
+    "kickoff": "2025-09-20 18:30:00",
+    "round": 5,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-45",
+    "home": "Deportivo Alavés",
+    "away": "Sevilla",
+    "kickoff": "2025-09-20 18:30:00",
+    "round": 5,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-46",
+    "home": "Valencia",
+    "away": "Athletic Club",
+    "kickoff": "2025-09-20 21:00:00",
+    "round": 5,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-47",
+    "home": "Rayo Vallecano",
+    "away": "Celta de Vigo",
+    "kickoff": "2025-09-21 14:00:00",
+    "round": 5,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-48",
+    "home": "Mallorca",
+    "away": "Atlético de Madrid",
+    "kickoff": "2025-09-21 16:15:00",
+    "round": 5,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-49",
+    "home": "Elche",
+    "away": "Real Oviedo",
+    "kickoff": "2025-09-21 18:30:00",
+    "round": 5,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-50",
+    "home": "FC Barcelona",
+    "away": "Getafe",
+    "kickoff": "2025-09-21 21:00:00",
+    "round": 5,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-51",
+    "home": "Athletic Club",
+    "away": "Girona",
+    "kickoff": "2025-09-23 19:00:00",
+    "round": 6,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-52",
+    "home": "Espanyol",
+    "away": "Valencia",
+    "kickoff": "2025-09-23 19:00:00",
+    "round": 6,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-53",
+    "home": "Levante",
+    "away": "Real Madrid",
+    "kickoff": "2025-09-23 21:30:00",
+    "round": 6,
+    "home_score": 1,
+    "away_score": 4
+  },
+  {
+    "id": "openfootball-2025-26-54",
+    "home": "Sevilla",
+    "away": "Villarreal",
+    "kickoff": "2025-09-23 21:30:00",
+    "round": 6,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-55",
+    "home": "Getafe",
+    "away": "Deportivo Alavés",
+    "kickoff": "2025-09-24 19:00:00",
+    "round": 6,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-56",
+    "home": "Atlético de Madrid",
+    "away": "Rayo Vallecano",
+    "kickoff": "2025-09-24 21:30:00",
+    "round": 6,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-57",
+    "home": "Real Sociedad",
+    "away": "Mallorca",
+    "kickoff": "2025-09-24 21:30:00",
+    "round": 6,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-58",
+    "home": "Osasuna",
+    "away": "Elche",
+    "kickoff": "2025-09-25 19:30:00",
+    "round": 6,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-59",
+    "home": "Real Oviedo",
+    "away": "FC Barcelona",
+    "kickoff": "2025-09-25 21:30:00",
+    "round": 6,
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-60",
+    "home": "Girona",
+    "away": "Espanyol",
+    "kickoff": "2025-09-26 21:00:00",
+    "round": 7,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-61",
+    "home": "Getafe",
+    "away": "Levante",
+    "kickoff": "2025-09-27 14:00:00",
+    "round": 7,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-62",
+    "home": "Atlético de Madrid",
+    "away": "Real Madrid",
+    "kickoff": "2025-09-27 16:15:00",
+    "round": 7,
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-63",
+    "home": "Mallorca",
+    "away": "Deportivo Alavés",
+    "kickoff": "2025-09-27 18:30:00",
+    "round": 7,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-64",
+    "home": "Villarreal",
+    "away": "Athletic Club",
+    "kickoff": "2025-09-27 21:00:00",
+    "round": 7,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-65",
+    "home": "Rayo Vallecano",
+    "away": "Sevilla",
+    "kickoff": "2025-09-28 14:00:00",
+    "round": 7,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-66",
+    "home": "Elche",
+    "away": "Celta de Vigo",
+    "kickoff": "2025-09-28 16:15:00",
+    "round": 7,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-67",
+    "home": "FC Barcelona",
+    "away": "Real Sociedad",
+    "kickoff": "2025-09-28 18:30:00",
+    "round": 7,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-68",
+    "home": "Real Betis",
+    "away": "Osasuna",
+    "kickoff": "2025-09-28 21:00:00",
+    "round": 7,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-69",
+    "home": "Valencia",
+    "away": "Real Oviedo",
+    "kickoff": "2025-09-30 20:00:00",
+    "round": 7,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-70",
+    "home": "Osasuna",
+    "away": "Getafe",
+    "kickoff": "2025-10-03 21:00:00",
+    "round": 8,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-71",
+    "home": "Real Oviedo",
+    "away": "Levante",
+    "kickoff": "2025-10-04 14:00:00",
+    "round": 8,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-72",
+    "home": "Girona",
+    "away": "Valencia",
+    "kickoff": "2025-10-04 16:15:00",
+    "round": 8,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-73",
+    "home": "Athletic Club",
+    "away": "Mallorca",
+    "kickoff": "2025-10-04 18:30:00",
+    "round": 8,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-74",
+    "home": "Real Madrid",
+    "away": "Villarreal",
+    "kickoff": "2025-10-04 21:00:00",
+    "round": 8,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-75",
+    "home": "Deportivo Alavés",
+    "away": "Elche",
+    "kickoff": "2025-10-05 14:00:00",
+    "round": 8,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-76",
+    "home": "Sevilla",
+    "away": "FC Barcelona",
+    "kickoff": "2025-10-05 16:15:00",
+    "round": 8,
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-77",
+    "home": "Espanyol",
+    "away": "Real Betis",
+    "kickoff": "2025-10-05 18:30:00",
+    "round": 8,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-78",
+    "home": "Real Sociedad",
+    "away": "Rayo Vallecano",
+    "kickoff": "2025-10-05 18:30:00",
+    "round": 8,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-79",
+    "home": "Celta de Vigo",
+    "away": "Atlético de Madrid",
+    "kickoff": "2025-10-05 21:00:00",
+    "round": 8,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-80",
+    "home": "Real Oviedo",
+    "away": "Espanyol",
+    "kickoff": "2025-10-17 21:00:00",
+    "round": 9,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-81",
+    "home": "Sevilla",
+    "away": "Mallorca",
+    "kickoff": "2025-10-18 14:00:00",
+    "round": 9,
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-82",
+    "home": "FC Barcelona",
+    "away": "Girona",
+    "kickoff": "2025-10-18 16:15:00",
+    "round": 9,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-83",
+    "home": "Villarreal",
+    "away": "Real Betis",
+    "kickoff": "2025-10-18 18:30:00",
+    "round": 9,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-84",
+    "home": "Atlético de Madrid",
+    "away": "Osasuna",
+    "kickoff": "2025-10-18 21:00:00",
+    "round": 9,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-85",
+    "home": "Elche",
+    "away": "Athletic Club",
+    "kickoff": "2025-10-19 14:00:00",
+    "round": 9,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-86",
+    "home": "Celta de Vigo",
+    "away": "Real Sociedad",
+    "kickoff": "2025-10-19 16:15:00",
+    "round": 9,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-87",
+    "home": "Levante",
+    "away": "Rayo Vallecano",
+    "kickoff": "2025-10-19 18:30:00",
+    "round": 9,
+    "home_score": 0,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-88",
+    "home": "Getafe",
+    "away": "Real Madrid",
+    "kickoff": "2025-10-19 21:00:00",
+    "round": 9,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-89",
+    "home": "Deportivo Alavés",
+    "away": "Valencia",
+    "kickoff": "2025-10-20 21:00:00",
+    "round": 9,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-90",
+    "home": "Real Sociedad",
+    "away": "Sevilla",
+    "kickoff": "2025-10-24 21:00:00",
+    "round": 10,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-91",
+    "home": "Girona",
+    "away": "Real Oviedo",
+    "kickoff": "2025-10-25 14:00:00",
+    "round": 10,
+    "home_score": 3,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-92",
+    "home": "Espanyol",
+    "away": "Elche",
+    "kickoff": "2025-10-25 16:15:00",
+    "round": 10,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-93",
+    "home": "Athletic Club",
+    "away": "Getafe",
+    "kickoff": "2025-10-25 18:30:00",
+    "round": 10,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-94",
+    "home": "Valencia",
+    "away": "Villarreal",
+    "kickoff": "2025-10-25 21:00:00",
+    "round": 10,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-95",
+    "home": "Mallorca",
+    "away": "Levante",
+    "kickoff": "2025-10-26 14:00:00",
+    "round": 10,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-96",
+    "home": "Real Madrid",
+    "away": "FC Barcelona",
+    "kickoff": "2025-10-26 16:15:00",
+    "round": 10,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-97",
+    "home": "Osasuna",
+    "away": "Celta de Vigo",
+    "kickoff": "2025-10-26 18:30:00",
+    "round": 10,
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-98",
+    "home": "Rayo Vallecano",
+    "away": "Deportivo Alavés",
+    "kickoff": "2025-10-26 21:00:00",
+    "round": 10,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-99",
+    "home": "Real Betis",
+    "away": "Atlético de Madrid",
+    "kickoff": "2025-10-27 21:00:00",
+    "round": 10,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-100",
+    "home": "Getafe",
+    "away": "Girona",
+    "kickoff": "2025-10-31 21:00:00",
+    "round": 11,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-101",
+    "home": "Villarreal",
+    "away": "Rayo Vallecano",
+    "kickoff": "2025-11-01 14:00:00",
+    "round": 11,
+    "home_score": 4,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-102",
+    "home": "Atlético de Madrid",
+    "away": "Sevilla",
+    "kickoff": "2025-11-01 16:15:00",
+    "round": 11,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-103",
+    "home": "Real Sociedad",
+    "away": "Athletic Club",
+    "kickoff": "2025-11-01 18:30:00",
+    "round": 11,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-104",
+    "home": "Real Madrid",
+    "away": "Valencia",
+    "kickoff": "2025-11-01 21:00:00",
+    "round": 11,
+    "home_score": 4,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-105",
+    "home": "Levante",
+    "away": "Celta de Vigo",
+    "kickoff": "2025-11-02 14:00:00",
+    "round": 11,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-106",
+    "home": "Deportivo Alavés",
+    "away": "Espanyol",
+    "kickoff": "2025-11-02 16:15:00",
+    "round": 11,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-107",
+    "home": "FC Barcelona",
+    "away": "Elche",
+    "kickoff": "2025-11-02 18:30:00",
+    "round": 11,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-108",
+    "home": "Real Betis",
+    "away": "Mallorca",
+    "kickoff": "2025-11-02 21:00:00",
+    "round": 11,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-109",
+    "home": "Real Oviedo",
+    "away": "Osasuna",
+    "kickoff": "2025-11-03 21:00:00",
+    "round": 11,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-110",
+    "home": "Elche",
+    "away": "Real Sociedad",
+    "kickoff": "2025-11-07 21:00:00",
+    "round": 12,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-111",
+    "home": "Girona",
+    "away": "Deportivo Alavés",
+    "kickoff": "2025-11-08 14:00:00",
+    "round": 12,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-112",
+    "home": "Sevilla",
+    "away": "Osasuna",
+    "kickoff": "2025-11-08 16:15:00",
+    "round": 12,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-113",
+    "home": "Atlético de Madrid",
+    "away": "Levante",
+    "kickoff": "2025-11-08 18:30:00",
+    "round": 12,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-114",
+    "home": "Espanyol",
+    "away": "Villarreal",
+    "kickoff": "2025-11-08 21:00:00",
+    "round": 12,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-115",
+    "home": "Athletic Club",
+    "away": "Real Oviedo",
+    "kickoff": "2025-11-09 14:00:00",
+    "round": 12,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-116",
+    "home": "Rayo Vallecano",
+    "away": "Real Madrid",
+    "kickoff": "2025-11-09 16:15:00",
+    "round": 12,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-117",
+    "home": "Valencia",
+    "away": "Real Betis",
+    "kickoff": "2025-11-09 18:30:00",
+    "round": 12,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-118",
+    "home": "Mallorca",
+    "away": "Getafe",
+    "kickoff": "2025-11-09 18:30:00",
+    "round": 12,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-119",
+    "home": "Celta de Vigo",
+    "away": "FC Barcelona",
+    "kickoff": "2025-11-09 21:00:00",
+    "round": 12,
+    "home_score": 2,
+    "away_score": 4
+  },
+  {
+    "id": "openfootball-2025-26-120",
+    "home": "Valencia",
+    "away": "Levante",
+    "kickoff": "2025-11-21 21:00:00",
+    "round": 13,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-121",
+    "home": "Deportivo Alavés",
+    "away": "Celta de Vigo",
+    "kickoff": "2025-11-22 14:00:00",
+    "round": 13,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-122",
+    "home": "FC Barcelona",
+    "away": "Athletic Club",
+    "kickoff": "2025-11-22 16:15:00",
+    "round": 13,
+    "home_score": 4,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-123",
+    "home": "Osasuna",
+    "away": "Real Sociedad",
+    "kickoff": "2025-11-22 18:30:00",
+    "round": 13,
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-124",
+    "home": "Villarreal",
+    "away": "Mallorca",
+    "kickoff": "2025-11-22 21:00:00",
+    "round": 13,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-125",
+    "home": "Real Oviedo",
+    "away": "Rayo Vallecano",
+    "kickoff": "2025-11-23 14:00:00",
+    "round": 13,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-126",
+    "home": "Real Betis",
+    "away": "Girona",
+    "kickoff": "2025-11-23 16:15:00",
+    "round": 13,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-127",
+    "home": "Getafe",
+    "away": "Atlético de Madrid",
+    "kickoff": "2025-11-23 18:30:00",
+    "round": 13,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-128",
+    "home": "Elche",
+    "away": "Real Madrid",
+    "kickoff": "2025-11-23 21:00:00",
+    "round": 13,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-129",
+    "home": "Espanyol",
+    "away": "Sevilla",
+    "kickoff": "2025-11-24 21:00:00",
+    "round": 13,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-130",
+    "home": "Getafe",
+    "away": "Elche",
+    "kickoff": "2025-11-28 21:00:00",
+    "round": 14,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-131",
+    "home": "Mallorca",
+    "away": "Osasuna",
+    "kickoff": "2025-11-29 14:00:00",
+    "round": 14,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-132",
+    "home": "FC Barcelona",
+    "away": "Deportivo Alavés",
+    "kickoff": "2025-11-29 16:15:00",
+    "round": 14,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-133",
+    "home": "Levante",
+    "away": "Athletic Club",
+    "kickoff": "2025-11-29 18:30:00",
+    "round": 14,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-134",
+    "home": "Atlético de Madrid",
+    "away": "Real Oviedo",
+    "kickoff": "2025-11-29 21:00:00",
+    "round": 14,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-135",
+    "home": "Real Sociedad",
+    "away": "Villarreal",
+    "kickoff": "2025-11-30 14:00:00",
+    "round": 14,
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-136",
+    "home": "Sevilla",
+    "away": "Real Betis",
+    "kickoff": "2025-11-30 16:15:00",
+    "round": 14,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-137",
+    "home": "Celta de Vigo",
+    "away": "Espanyol",
+    "kickoff": "2025-11-30 18:30:00",
+    "round": 14,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-138",
+    "home": "Girona",
+    "away": "Real Madrid",
+    "kickoff": "2025-11-30 21:00:00",
+    "round": 14,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-139",
+    "home": "Rayo Vallecano",
+    "away": "Valencia",
+    "kickoff": "2025-12-01 21:00:00",
+    "round": 14,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-140",
+    "home": "FC Barcelona",
+    "away": "Atlético de Madrid",
+    "kickoff": "2025-12-02 21:00:00",
+    "round": 19,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-141",
+    "home": "Athletic Club",
+    "away": "Real Madrid",
+    "kickoff": "2025-12-03 19:00:00",
+    "round": 19,
+    "home_score": 0,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-142",
+    "home": "Real Oviedo",
+    "away": "Mallorca",
+    "kickoff": "2025-12-05 21:00:00",
+    "round": 15,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-143",
+    "home": "Villarreal",
+    "away": "Getafe",
+    "kickoff": "2025-12-06 14:00:00",
+    "round": 15,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-144",
+    "home": "Deportivo Alavés",
+    "away": "Real Sociedad",
+    "kickoff": "2025-12-06 16:15:00",
+    "round": 15,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-145",
+    "home": "Real Betis",
+    "away": "FC Barcelona",
+    "kickoff": "2025-12-06 18:30:00",
+    "round": 15,
+    "home_score": 3,
+    "away_score": 5
+  },
+  {
+    "id": "openfootball-2025-26-146",
+    "home": "Athletic Club",
+    "away": "Atlético de Madrid",
+    "kickoff": "2025-12-06 21:00:00",
+    "round": 15,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-147",
+    "home": "Elche",
+    "away": "Girona",
+    "kickoff": "2025-12-07 14:00:00",
+    "round": 15,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-148",
+    "home": "Valencia",
+    "away": "Sevilla",
+    "kickoff": "2025-12-07 16:15:00",
+    "round": 15,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-149",
+    "home": "Espanyol",
+    "away": "Rayo Vallecano",
+    "kickoff": "2025-12-07 18:30:00",
+    "round": 15,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-150",
+    "home": "Real Madrid",
+    "away": "Celta de Vigo",
+    "kickoff": "2025-12-07 21:00:00",
+    "round": 15,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-151",
+    "home": "Osasuna",
+    "away": "Levante",
+    "kickoff": "2025-12-08 21:00:00",
+    "round": 15,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-152",
+    "home": "Real Sociedad",
+    "away": "Girona",
+    "kickoff": "2025-12-12 21:00:00",
+    "round": 16,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-153",
+    "home": "Atlético de Madrid",
+    "away": "Valencia",
+    "kickoff": "2025-12-13 14:00:00",
+    "round": 16,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-154",
+    "home": "Mallorca",
+    "away": "Elche",
+    "kickoff": "2025-12-13 16:15:00",
+    "round": 16,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-155",
+    "home": "FC Barcelona",
+    "away": "Osasuna",
+    "kickoff": "2025-12-13 18:30:00",
+    "round": 16,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-156",
+    "home": "Getafe",
+    "away": "Espanyol",
+    "kickoff": "2025-12-13 21:00:00",
+    "round": 16,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-157",
+    "home": "Sevilla",
+    "away": "Real Oviedo",
+    "kickoff": "2025-12-14 14:00:00",
+    "round": 16,
+    "home_score": 4,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-158",
+    "home": "Celta de Vigo",
+    "away": "Athletic Club",
+    "kickoff": "2025-12-14 16:15:00",
+    "round": 16,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-159",
+    "home": "Deportivo Alavés",
+    "away": "Real Madrid",
+    "kickoff": "2025-12-14 21:00:00",
+    "round": 16,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-160",
+    "home": "Rayo Vallecano",
+    "away": "Real Betis",
+    "kickoff": "2025-12-15 21:00:00",
+    "round": 16,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-161",
+    "home": "Valencia",
+    "away": "Mallorca",
+    "kickoff": "2025-12-19 21:00:00",
+    "round": 17,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-162",
+    "home": "Real Oviedo",
+    "away": "Celta de Vigo",
+    "kickoff": "2025-12-20 14:00:00",
+    "round": 17,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-163",
+    "home": "Levante",
+    "away": "Real Sociedad",
+    "kickoff": "2025-12-20 16:15:00",
+    "round": 17,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-164",
+    "home": "Osasuna",
+    "away": "Deportivo Alavés",
+    "kickoff": "2025-12-20 18:30:00",
+    "round": 17,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-165",
+    "home": "Real Madrid",
+    "away": "Sevilla",
+    "kickoff": "2025-12-20 21:00:00",
+    "round": 17,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-166",
+    "home": "Girona",
+    "away": "Atlético de Madrid",
+    "kickoff": "2025-12-21 14:00:00",
+    "round": 17,
+    "home_score": 0,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-167",
+    "home": "Villarreal",
+    "away": "FC Barcelona",
+    "kickoff": "2025-12-21 16:15:00",
+    "round": 17,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-168",
+    "home": "Elche",
+    "away": "Rayo Vallecano",
+    "kickoff": "2025-12-21 18:30:00",
+    "round": 17,
+    "home_score": 4,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-169",
+    "home": "Real Betis",
+    "away": "Getafe",
+    "kickoff": "2025-12-21 21:00:00",
+    "round": 17,
+    "home_score": 4,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-170",
+    "home": "Athletic Club",
+    "away": "Espanyol",
+    "kickoff": "2025-12-22 21:00:00",
+    "round": 17,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-171",
+    "home": "Rayo Vallecano",
+    "away": "Getafe",
+    "kickoff": "2026-01-02 21:00:00",
+    "round": 18,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-172",
+    "home": "Celta de Vigo",
+    "away": "Valencia",
+    "kickoff": "2026-01-03 14:00:00",
+    "round": 18,
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-173",
+    "home": "Osasuna",
+    "away": "Athletic Club",
+    "kickoff": "2026-01-03 16:15:00",
+    "round": 18,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-174",
+    "home": "Elche",
+    "away": "Villarreal",
+    "kickoff": "2026-01-03 18:30:00",
+    "round": 18,
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-175",
+    "home": "Espanyol",
+    "away": "FC Barcelona",
+    "kickoff": "2026-01-03 21:00:00",
+    "round": 18,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-176",
+    "home": "Sevilla",
+    "away": "Levante",
+    "kickoff": "2026-01-04 14:00:00",
+    "round": 18,
+    "home_score": 0,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-177",
+    "home": "Real Madrid",
+    "away": "Real Betis",
+    "kickoff": "2026-01-04 16:15:00",
+    "round": 18,
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-178",
+    "home": "Deportivo Alavés",
+    "away": "Real Oviedo",
+    "kickoff": "2026-01-04 18:30:00",
+    "round": 18,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-179",
+    "home": "Mallorca",
+    "away": "Girona",
+    "kickoff": "2026-01-04 18:30:00",
+    "round": 18,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-180",
+    "home": "Real Sociedad",
+    "away": "Atlético de Madrid",
+    "kickoff": "2026-01-04 21:00:00",
+    "round": 18,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-181",
+    "home": "Getafe",
+    "away": "Real Sociedad",
+    "kickoff": "2026-01-09 21:00:00",
+    "round": 19,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-182",
+    "home": "Real Oviedo",
+    "away": "Real Betis",
+    "kickoff": "2026-01-10 14:00:00",
+    "round": 19,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-183",
+    "home": "Villarreal",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-01-10 16:15:00",
+    "round": 19,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-184",
+    "home": "Girona",
+    "away": "Osasuna",
+    "kickoff": "2026-01-10 18:30:00",
+    "round": 19,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-185",
+    "home": "Valencia",
+    "away": "Elche",
+    "kickoff": "2026-01-10 21:00:00",
+    "round": 19,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-186",
+    "home": "Rayo Vallecano",
+    "away": "Mallorca",
+    "kickoff": "2026-01-11 14:00:00",
+    "round": 19,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-187",
+    "home": "Levante",
+    "away": "Espanyol",
+    "kickoff": "2026-01-11 16:15:00",
+    "round": 19,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-188",
+    "home": "Sevilla",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-01-12 21:00:00",
+    "round": 19,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-189",
+    "home": "Espanyol",
+    "away": "Girona",
+    "kickoff": "2026-01-16 21:00:00",
+    "round": 20,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-190",
+    "home": "Real Madrid",
+    "away": "Levante",
+    "kickoff": "2026-01-17 14:00:00",
+    "round": 20,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-191",
+    "home": "Mallorca",
+    "away": "Athletic Club",
+    "kickoff": "2026-01-17 16:15:00",
+    "round": 20,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-192",
+    "home": "Osasuna",
+    "away": "Real Oviedo",
+    "kickoff": "2026-01-17 18:30:00",
+    "round": 20,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-193",
+    "home": "Real Betis",
+    "away": "Villarreal",
+    "kickoff": "2026-01-17 21:00:00",
+    "round": 20,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-194",
+    "home": "Getafe",
+    "away": "Valencia",
+    "kickoff": "2026-01-18 14:00:00",
+    "round": 20,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-195",
+    "home": "Atlético de Madrid",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-01-18 16:15:00",
+    "round": 20,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-196",
+    "home": "Celta de Vigo",
+    "away": "Rayo Vallecano",
+    "kickoff": "2026-01-18 18:30:00",
+    "round": 20,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-197",
+    "home": "Real Sociedad",
+    "away": "FC Barcelona",
+    "kickoff": "2026-01-18 21:00:00",
+    "round": 20,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-198",
+    "home": "Elche",
+    "away": "Sevilla",
+    "kickoff": "2026-01-19 21:00:00",
+    "round": 20,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-199",
+    "home": "Levante",
+    "away": "Elche",
+    "kickoff": "2026-01-23 21:00:00",
+    "round": 21,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-200",
+    "home": "Rayo Vallecano",
+    "away": "Osasuna",
+    "kickoff": "2026-01-24 14:00:00",
+    "round": 21,
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-201",
+    "home": "Valencia",
+    "away": "Espanyol",
+    "kickoff": "2026-01-24 16:15:00",
+    "round": 21,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-202",
+    "home": "Sevilla",
+    "away": "Athletic Club",
+    "kickoff": "2026-01-24 18:30:00",
+    "round": 21,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-203",
+    "home": "Villarreal",
+    "away": "Real Madrid",
+    "kickoff": "2026-01-24 21:00:00",
+    "round": 21,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-204",
+    "home": "Atlético de Madrid",
+    "away": "Mallorca",
+    "kickoff": "2026-01-25 14:00:00",
+    "round": 21,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-205",
+    "home": "FC Barcelona",
+    "away": "Real Oviedo",
+    "kickoff": "2026-01-25 16:15:00",
+    "round": 21,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-206",
+    "home": "Real Sociedad",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-01-25 18:30:00",
+    "round": 21,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-207",
+    "home": "Deportivo Alavés",
+    "away": "Real Betis",
+    "kickoff": "2026-01-25 21:00:00",
+    "round": 21,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-208",
+    "home": "Girona",
+    "away": "Getafe",
+    "kickoff": "2026-01-26 21:00:00",
+    "round": 21,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-209",
+    "home": "Espanyol",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-01-30 21:00:00",
+    "round": 22,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-210",
+    "home": "Real Oviedo",
+    "away": "Girona",
+    "kickoff": "2026-01-31 14:00:00",
+    "round": 22,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-211",
+    "home": "Osasuna",
+    "away": "Villarreal",
+    "kickoff": "2026-01-31 16:15:00",
+    "round": 22,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-212",
+    "home": "Levante",
+    "away": "Atlético de Madrid",
+    "kickoff": "2026-01-31 18:30:00",
+    "round": 22,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-213",
+    "home": "Elche",
+    "away": "FC Barcelona",
+    "kickoff": "2026-01-31 21:00:00",
+    "round": 22,
+    "home_score": 1,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-214",
+    "home": "Real Madrid",
+    "away": "Rayo Vallecano",
+    "kickoff": "2026-02-01 14:00:00",
+    "round": 22,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-215",
+    "home": "Real Betis",
+    "away": "Valencia",
+    "kickoff": "2026-02-01 16:15:00",
+    "round": 22,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-216",
+    "home": "Getafe",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-02-01 18:30:00",
+    "round": 22,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-217",
+    "home": "Athletic Club",
+    "away": "Real Sociedad",
+    "kickoff": "2026-02-01 21:00:00",
+    "round": 22,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-218",
+    "home": "Mallorca",
+    "away": "Sevilla",
+    "kickoff": "2026-02-02 21:00:00",
+    "round": 22,
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-219",
+    "home": "Celta de Vigo",
+    "away": "Osasuna",
+    "kickoff": "2026-02-06 21:00:00",
+    "round": 23,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-220",
+    "home": "FC Barcelona",
+    "away": "Mallorca",
+    "kickoff": "2026-02-07 16:15:00",
+    "round": 23,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-221",
+    "home": "Real Sociedad",
+    "away": "Elche",
+    "kickoff": "2026-02-07 21:00:00",
+    "round": 23,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-222",
+    "home": "Deportivo Alavés",
+    "away": "Getafe",
+    "kickoff": "2026-02-08 14:00:00",
+    "round": 23,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-223",
+    "home": "Athletic Club",
+    "away": "Levante",
+    "kickoff": "2026-02-08 16:15:00",
+    "round": 23,
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-224",
+    "home": "Sevilla",
+    "away": "Girona",
+    "kickoff": "2026-02-08 16:15:00",
+    "round": 23,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-225",
+    "home": "Atlético de Madrid",
+    "away": "Real Betis",
+    "kickoff": "2026-02-08 18:30:00",
+    "round": 23,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-226",
+    "home": "Valencia",
+    "away": "Real Madrid",
+    "kickoff": "2026-02-08 21:00:00",
+    "round": 23,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-227",
+    "home": "Villarreal",
+    "away": "Espanyol",
+    "kickoff": "2026-02-09 21:00:00",
+    "round": 23,
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-228",
+    "home": "Elche",
+    "away": "Osasuna",
+    "kickoff": "2026-02-13 21:00:00",
+    "round": 24,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-229",
+    "home": "Espanyol",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-02-14 14:00:00",
+    "round": 24,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-230",
+    "home": "Getafe",
+    "away": "Villarreal",
+    "kickoff": "2026-02-14 16:15:00",
+    "round": 24,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-231",
+    "home": "Sevilla",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-02-14 18:30:00",
+    "round": 24,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-232",
+    "home": "Real Madrid",
+    "away": "Real Sociedad",
+    "kickoff": "2026-02-14 21:00:00",
+    "round": 24,
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-233",
+    "home": "Real Oviedo",
+    "away": "Athletic Club",
+    "kickoff": "2026-02-15 14:00:00",
+    "round": 24,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-234",
+    "home": "Rayo Vallecano",
+    "away": "Atlético de Madrid",
+    "kickoff": "2026-02-15 16:15:00",
+    "round": 24,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-235",
+    "home": "Levante",
+    "away": "Valencia",
+    "kickoff": "2026-02-15 18:30:00",
+    "round": 24,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-236",
+    "home": "Mallorca",
+    "away": "Real Betis",
+    "kickoff": "2026-02-15 21:00:00",
+    "round": 24,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-237",
+    "home": "Girona",
+    "away": "FC Barcelona",
+    "kickoff": "2026-02-16 21:00:00",
+    "round": 24,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-238",
+    "home": "Levante",
+    "away": "Villarreal",
+    "kickoff": "2026-02-18 20:00:00",
+    "round": 16,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-239",
+    "home": "Athletic Club",
+    "away": "Elche",
+    "kickoff": "2026-02-20 21:00:00",
+    "round": 25,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-240",
+    "home": "Real Sociedad",
+    "away": "Real Oviedo",
+    "kickoff": "2026-02-21 14:00:00",
+    "round": 25,
+    "home_score": 3,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-241",
+    "home": "Real Betis",
+    "away": "Rayo Vallecano",
+    "kickoff": "2026-02-21 16:15:00",
+    "round": 25,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-242",
+    "home": "Osasuna",
+    "away": "Real Madrid",
+    "kickoff": "2026-02-21 18:30:00",
+    "round": 25,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-243",
+    "home": "Atlético de Madrid",
+    "away": "Espanyol",
+    "kickoff": "2026-02-21 21:00:00",
+    "round": 25,
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-244",
+    "home": "Getafe",
+    "away": "Sevilla",
+    "kickoff": "2026-02-22 14:00:00",
+    "round": 25,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-245",
+    "home": "FC Barcelona",
+    "away": "Levante",
+    "kickoff": "2026-02-22 16:15:00",
+    "round": 25,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-246",
+    "home": "Celta de Vigo",
+    "away": "Mallorca",
+    "kickoff": "2026-02-22 18:30:00",
+    "round": 25,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-247",
+    "home": "Villarreal",
+    "away": "Valencia",
+    "kickoff": "2026-02-22 21:00:00",
+    "round": 25,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-248",
+    "home": "Deportivo Alavés",
+    "away": "Girona",
+    "kickoff": "2026-02-23 21:00:00",
+    "round": 25,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-249",
+    "home": "Levante",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-02-27 21:00:00",
+    "round": 26,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-250",
+    "home": "Rayo Vallecano",
+    "away": "Athletic Club",
+    "kickoff": "2026-02-28 14:00:00",
+    "round": 26,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-251",
+    "home": "FC Barcelona",
+    "away": "Villarreal",
+    "kickoff": "2026-02-28 16:15:00",
+    "round": 26,
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-252",
+    "home": "Mallorca",
+    "away": "Real Sociedad",
+    "kickoff": "2026-02-28 18:30:00",
+    "round": 26,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-253",
+    "home": "Real Oviedo",
+    "away": "Atlético de Madrid",
+    "kickoff": "2026-02-28 21:00:00",
+    "round": 26,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-254",
+    "home": "Elche",
+    "away": "Espanyol",
+    "kickoff": "2026-03-01 14:00:00",
+    "round": 26,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-255",
+    "home": "Valencia",
+    "away": "Osasuna",
+    "kickoff": "2026-03-01 16:15:00",
+    "round": 26,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-256",
+    "home": "Real Betis",
+    "away": "Sevilla",
+    "kickoff": "2026-03-01 18:30:00",
+    "round": 26,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-257",
+    "home": "Girona",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-03-01 21:00:00",
+    "round": 26,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-258",
+    "home": "Real Madrid",
+    "away": "Getafe",
+    "kickoff": "2026-03-02 21:00:00",
+    "round": 26,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-259",
+    "home": "Rayo Vallecano",
+    "away": "Real Oviedo",
+    "kickoff": "2026-03-04 19:00:00",
+    "round": 23,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-260",
+    "home": "Celta de Vigo",
+    "away": "Real Madrid",
+    "kickoff": "2026-03-06 21:00:00",
+    "round": 27,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-261",
+    "home": "Osasuna",
+    "away": "Mallorca",
+    "kickoff": "2026-03-07 14:00:00",
+    "round": 27,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-262",
+    "home": "Levante",
+    "away": "Girona",
+    "kickoff": "2026-03-07 16:15:00",
+    "round": 27,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-263",
+    "home": "Atlético de Madrid",
+    "away": "Real Sociedad",
+    "kickoff": "2026-03-07 18:30:00",
+    "round": 27,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-264",
+    "home": "Athletic Club",
+    "away": "FC Barcelona",
+    "kickoff": "2026-03-07 21:00:00",
+    "round": 27,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-265",
+    "home": "Villarreal",
+    "away": "Elche",
+    "kickoff": "2026-03-08 14:00:00",
+    "round": 27,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-266",
+    "home": "Getafe",
+    "away": "Real Betis",
+    "kickoff": "2026-03-08 16:15:00",
+    "round": 27,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-267",
+    "home": "Sevilla",
+    "away": "Rayo Vallecano",
+    "kickoff": "2026-03-08 18:30:00",
+    "round": 27,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-268",
+    "home": "Valencia",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-03-08 21:00:00",
+    "round": 27,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-269",
+    "home": "Espanyol",
+    "away": "Real Oviedo",
+    "kickoff": "2026-03-09 21:00:00",
+    "round": 27,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-270",
+    "home": "Deportivo Alavés",
+    "away": "Villarreal",
+    "kickoff": "2026-03-13 21:00:00",
+    "round": 28,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-271",
+    "home": "Girona",
+    "away": "Athletic Club",
+    "kickoff": "2026-03-14 14:00:00",
+    "round": 28,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-272",
+    "home": "Atlético de Madrid",
+    "away": "Getafe",
+    "kickoff": "2026-03-14 16:15:00",
+    "round": 28,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-273",
+    "home": "Real Oviedo",
+    "away": "Valencia",
+    "kickoff": "2026-03-14 18:30:00",
+    "round": 28,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-274",
+    "home": "Real Madrid",
+    "away": "Elche",
+    "kickoff": "2026-03-14 21:00:00",
+    "round": 28,
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-275",
+    "home": "Mallorca",
+    "away": "Espanyol",
+    "kickoff": "2026-03-15 14:00:00",
+    "round": 28,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-276",
+    "home": "FC Barcelona",
+    "away": "Sevilla",
+    "kickoff": "2026-03-15 16:15:00",
+    "round": 28,
+    "home_score": 5,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-277",
+    "home": "Real Betis",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-03-15 18:30:00",
+    "round": 28,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-278",
+    "home": "Real Sociedad",
+    "away": "Osasuna",
+    "kickoff": "2026-03-15 21:00:00",
+    "round": 28,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-279",
+    "home": "Rayo Vallecano",
+    "away": "Levante",
+    "kickoff": "2026-03-16 21:00:00",
+    "round": 28,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-280",
+    "home": "Villarreal",
+    "away": "Real Sociedad",
+    "kickoff": "2026-03-20 21:00:00",
+    "round": 29,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-281",
+    "home": "Elche",
+    "away": "Mallorca",
+    "kickoff": "2026-03-21 14:00:00",
+    "round": 29,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-282",
+    "home": "Espanyol",
+    "away": "Getafe",
+    "kickoff": "2026-03-21 16:15:00",
+    "round": 29,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-283",
+    "home": "Levante",
+    "away": "Real Oviedo",
+    "kickoff": "2026-03-21 18:30:00",
+    "round": 29,
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-284",
+    "home": "Osasuna",
+    "away": "Girona",
+    "kickoff": "2026-03-21 18:30:00",
+    "round": 29,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-285",
+    "home": "Sevilla",
+    "away": "Valencia",
+    "kickoff": "2026-03-21 21:00:00",
+    "round": 29,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-286",
+    "home": "FC Barcelona",
+    "away": "Rayo Vallecano",
+    "kickoff": "2026-03-22 14:00:00",
+    "round": 29,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-287",
+    "home": "Celta de Vigo",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-03-22 16:15:00",
+    "round": 29,
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "id": "openfootball-2025-26-288",
+    "home": "Athletic Club",
+    "away": "Real Betis",
+    "kickoff": "2026-03-22 18:30:00",
+    "round": 29,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-289",
+    "home": "Real Madrid",
+    "away": "Atlético de Madrid",
+    "kickoff": "2026-03-22 21:00:00",
+    "round": 29,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-290",
+    "home": "Rayo Vallecano",
+    "away": "Elche",
+    "kickoff": "2026-04-03 21:00:00",
+    "round": 30,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-291",
+    "home": "Real Sociedad",
+    "away": "Levante",
+    "kickoff": "2026-04-04 14:00:00",
+    "round": 30,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-292",
+    "home": "Mallorca",
+    "away": "Real Madrid",
+    "kickoff": "2026-04-04 16:15:00",
+    "round": 30,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-293",
+    "home": "Real Betis",
+    "away": "Espanyol",
+    "kickoff": "2026-04-04 18:30:00",
+    "round": 30,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-294",
+    "home": "Atlético de Madrid",
+    "away": "FC Barcelona",
+    "kickoff": "2026-04-04 21:00:00",
+    "round": 30,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-295",
+    "home": "Getafe",
+    "away": "Athletic Club",
+    "kickoff": "2026-04-05 14:00:00",
+    "round": 30,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-296",
+    "home": "Valencia",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-04-05 16:15:00",
+    "round": 30,
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-297",
+    "home": "Real Oviedo",
+    "away": "Sevilla",
+    "kickoff": "2026-04-05 18:30:00",
+    "round": 30,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-298",
+    "home": "Deportivo Alavés",
+    "away": "Osasuna",
+    "kickoff": "2026-04-05 21:00:00",
+    "round": 30,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-299",
+    "home": "Girona",
+    "away": "Villarreal",
+    "kickoff": "2026-04-06 21:00:00",
+    "round": 30,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-300",
+    "home": "Real Madrid",
+    "away": "Girona",
+    "kickoff": "2026-04-10 21:00:00",
+    "round": 31,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-301",
+    "home": "Real Sociedad",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-04-11 14:00:00",
+    "round": 31,
+    "home_score": 3,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-302",
+    "home": "Elche",
+    "away": "Valencia",
+    "kickoff": "2026-04-11 16:15:00",
+    "round": 31,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-303",
+    "home": "FC Barcelona",
+    "away": "Espanyol",
+    "kickoff": "2026-04-11 18:30:00",
+    "round": 31,
+    "home_score": 4,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-304",
+    "home": "Sevilla",
+    "away": "Atlético de Madrid",
+    "kickoff": "2026-04-11 21:00:00",
+    "round": 31,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-305",
+    "home": "Osasuna",
+    "away": "Real Betis",
+    "kickoff": "2026-04-12 14:00:00",
+    "round": 31,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-306",
+    "home": "Mallorca",
+    "away": "Rayo Vallecano",
+    "kickoff": "2026-04-12 16:15:00",
+    "round": 31,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-307",
+    "home": "Celta de Vigo",
+    "away": "Real Oviedo",
+    "kickoff": "2026-04-12 18:30:00",
+    "round": 31,
+    "home_score": 0,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-308",
+    "home": "Athletic Club",
+    "away": "Villarreal",
+    "kickoff": "2026-04-12 21:00:00",
+    "round": 31,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-309",
+    "home": "Levante",
+    "away": "Getafe",
+    "kickoff": "2026-04-13 21:00:00",
+    "round": 31,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-310",
+    "home": "Athletic Club",
+    "away": "Osasuna",
+    "kickoff": "2026-04-21 19:00:00",
+    "round": 33,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-311",
+    "home": "Mallorca",
+    "away": "Valencia",
+    "kickoff": "2026-04-21 19:00:00",
+    "round": 33,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-312",
+    "home": "Real Madrid",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-04-21 21:30:00",
+    "round": 33,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-313",
+    "home": "Girona",
+    "away": "Real Betis",
+    "kickoff": "2026-04-21 21:30:00",
+    "round": 33,
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-314",
+    "home": "Elche",
+    "away": "Atlético de Madrid",
+    "kickoff": "2026-04-22 19:00:00",
+    "round": 33,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-315",
+    "home": "Real Sociedad",
+    "away": "Getafe",
+    "kickoff": "2026-04-22 20:00:00",
+    "round": 33,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-316",
+    "home": "FC Barcelona",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-04-22 21:30:00",
+    "round": 33,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-317",
+    "home": "Levante",
+    "away": "Sevilla",
+    "kickoff": "2026-04-23 19:00:00",
+    "round": 33,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-318",
+    "home": "Rayo Vallecano",
+    "away": "Espanyol",
+    "kickoff": "2026-04-23 20:00:00",
+    "round": 33,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-319",
+    "home": "Real Oviedo",
+    "away": "Villarreal",
+    "kickoff": "2026-04-23 21:30:00",
+    "round": 33,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-320",
+    "home": "Real Betis",
+    "away": "Real Madrid",
+    "kickoff": "2026-04-24 21:00:00",
+    "round": 32,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-321",
+    "home": "Deportivo Alavés",
+    "away": "Mallorca",
+    "kickoff": "2026-04-25 14:00:00",
+    "round": 32,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-322",
+    "home": "Getafe",
+    "away": "FC Barcelona",
+    "kickoff": "2026-04-25 16:15:00",
+    "round": 32,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-323",
+    "home": "Valencia",
+    "away": "Girona",
+    "kickoff": "2026-04-25 18:30:00",
+    "round": 32,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-324",
+    "home": "Atlético de Madrid",
+    "away": "Athletic Club",
+    "kickoff": "2026-04-25 21:00:00",
+    "round": 32,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-325",
+    "home": "Rayo Vallecano",
+    "away": "Real Sociedad",
+    "kickoff": "2026-04-26 14:00:00",
+    "round": 32,
+    "home_score": 3,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-326",
+    "home": "Real Oviedo",
+    "away": "Elche",
+    "kickoff": "2026-04-26 16:15:00",
+    "round": 32,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-327",
+    "home": "Osasuna",
+    "away": "Sevilla",
+    "kickoff": "2026-04-26 18:30:00",
+    "round": 32,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-328",
+    "home": "Villarreal",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-04-26 21:00:00",
+    "round": 32,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-329",
+    "home": "Espanyol",
+    "away": "Levante",
+    "kickoff": "2026-04-27 21:00:00",
+    "round": 32,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-330",
+    "home": "Girona",
+    "away": "Mallorca",
+    "kickoff": "2026-05-01 21:00:00",
+    "round": 34,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-331",
+    "home": "Villarreal",
+    "away": "Levante",
+    "kickoff": "2026-05-02 14:00:00",
+    "round": 34,
+    "home_score": 5,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-332",
+    "home": "Valencia",
+    "away": "Atlético de Madrid",
+    "kickoff": "2026-05-02 16:15:00",
+    "round": 34,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-333",
+    "home": "Deportivo Alavés",
+    "away": "Athletic Club",
+    "kickoff": "2026-05-02 18:30:00",
+    "round": 34,
+    "home_score": 2,
+    "away_score": 4
+  },
+  {
+    "id": "openfootball-2025-26-334",
+    "home": "Osasuna",
+    "away": "FC Barcelona",
+    "kickoff": "2026-05-02 21:00:00",
+    "round": 34,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-335",
+    "home": "Celta de Vigo",
+    "away": "Elche",
+    "kickoff": "2026-05-03 14:00:00",
+    "round": 34,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-336",
+    "home": "Getafe",
+    "away": "Rayo Vallecano",
+    "kickoff": "2026-05-03 16:15:00",
+    "round": 34,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-337",
+    "home": "Real Betis",
+    "away": "Real Oviedo",
+    "kickoff": "2026-05-03 18:30:00",
+    "round": 34,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-338",
+    "home": "Espanyol",
+    "away": "Real Madrid",
+    "kickoff": "2026-05-03 21:00:00",
+    "round": 34,
+    "home_score": 0,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-339",
+    "home": "Sevilla",
+    "away": "Real Sociedad",
+    "kickoff": "2026-05-04 21:00:00",
+    "round": 34,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-340",
+    "home": "Levante",
+    "away": "Osasuna",
+    "kickoff": "2026-05-08 21:00:00",
+    "round": 35,
+    "home_score": 3,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-341",
+    "home": "Elche",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-05-09 14:00:00",
+    "round": 35,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-342",
+    "home": "Sevilla",
+    "away": "Espanyol",
+    "kickoff": "2026-05-09 16:15:00",
+    "round": 35,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-343",
+    "home": "Atlético de Madrid",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-05-09 18:30:00",
+    "round": 35,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-344",
+    "home": "Real Sociedad",
+    "away": "Real Betis",
+    "kickoff": "2026-05-09 21:00:00",
+    "round": 35,
+    "home_score": 2,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-345",
+    "home": "Mallorca",
+    "away": "Villarreal",
+    "kickoff": "2026-05-10 14:00:00",
+    "round": 35,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-346",
+    "home": "Athletic Club",
+    "away": "Valencia",
+    "kickoff": "2026-05-10 16:15:00",
+    "round": 35,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-347",
+    "home": "Real Oviedo",
+    "away": "Getafe",
+    "kickoff": "2026-05-10 18:30:00",
+    "round": 35,
+    "home_score": 0,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-348",
+    "home": "FC Barcelona",
+    "away": "Real Madrid",
+    "kickoff": "2026-05-10 21:00:00",
+    "round": 35,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-349",
+    "home": "Rayo Vallecano",
+    "away": "Girona",
+    "kickoff": "2026-05-11 21:00:00",
+    "round": 35,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-350",
+    "home": "Celta de Vigo",
+    "away": "Levante",
+    "kickoff": "2026-05-12 19:00:00",
+    "round": 36,
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-351",
+    "home": "Real Betis",
+    "away": "Elche",
+    "kickoff": "2026-05-12 20:00:00",
+    "round": 36,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-352",
+    "home": "Osasuna",
+    "away": "Atlético de Madrid",
+    "kickoff": "2026-05-12 21:30:00",
+    "round": 36,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-353",
+    "home": "Espanyol",
+    "away": "Athletic Club",
+    "kickoff": "2026-05-13 19:00:00",
+    "round": 36,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-354",
+    "home": "Villarreal",
+    "away": "Sevilla",
+    "kickoff": "2026-05-13 19:00:00",
+    "round": 36,
+    "home_score": 2,
+    "away_score": 3
+  },
+  {
+    "id": "openfootball-2025-26-355",
+    "home": "Deportivo Alavés",
+    "away": "FC Barcelona",
+    "kickoff": "2026-05-13 21:30:00",
+    "round": 36,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-356",
+    "home": "Getafe",
+    "away": "Mallorca",
+    "kickoff": "2026-05-13 21:30:00",
+    "round": 36,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-357",
+    "home": "Valencia",
+    "away": "Rayo Vallecano",
+    "kickoff": "2026-05-14 19:00:00",
+    "round": 36,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-358",
+    "home": "Girona",
+    "away": "Real Sociedad",
+    "kickoff": "2026-05-14 20:00:00",
+    "round": 36,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-359",
+    "home": "Real Madrid",
+    "away": "Real Oviedo",
+    "kickoff": "2026-05-14 21:30:00",
+    "round": 36,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-360",
+    "home": "Athletic Club",
+    "away": "Celta de Vigo",
+    "kickoff": "2026-05-17 19:00:00",
+    "round": 37,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-361",
+    "home": "Atlético de Madrid",
+    "away": "Girona",
+    "kickoff": "2026-05-17 19:00:00",
+    "round": 37,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-362",
+    "home": "Elche",
+    "away": "Getafe",
+    "kickoff": "2026-05-17 19:00:00",
+    "round": 37,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-363",
+    "home": "Levante",
+    "away": "Mallorca",
+    "kickoff": "2026-05-17 19:00:00",
+    "round": 37,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-364",
+    "home": "Rayo Vallecano",
+    "away": "Villarreal",
+    "kickoff": "2026-05-17 19:00:00",
+    "round": 37,
+    "home_score": 2,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-365",
+    "home": "Real Sociedad",
+    "away": "Valencia",
+    "kickoff": "2026-05-17 19:00:00",
+    "round": 37,
+    "home_score": 3,
+    "away_score": 4
+  },
+  {
+    "id": "openfootball-2025-26-366",
+    "home": "Real Oviedo",
+    "away": "Deportivo Alavés",
+    "kickoff": "2026-05-17 19:00:00",
+    "round": 37,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-367",
+    "home": "Osasuna",
+    "away": "Espanyol",
+    "kickoff": "2026-05-17 19:00:00",
+    "round": 37,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-368",
+    "home": "Sevilla",
+    "away": "Real Madrid",
+    "kickoff": "2026-05-17 19:00:00",
+    "round": 37,
+    "home_score": 0,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-369",
+    "home": "FC Barcelona",
+    "away": "Real Betis",
+    "kickoff": "2026-05-17 21:15:00",
+    "round": 37,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-370",
+    "home": "Deportivo Alavés",
+    "away": "Rayo Vallecano",
+    "kickoff": "2026-05-23 21:00:00",
+    "round": 38,
+    "home_score": 1,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-371",
+    "home": "Real Betis",
+    "away": "Levante",
+    "kickoff": "2026-05-23 21:00:00",
+    "round": 38,
+    "home_score": 2,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-372",
+    "home": "Celta de Vigo",
+    "away": "Sevilla",
+    "kickoff": "2026-05-23 21:00:00",
+    "round": 38,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-373",
+    "home": "Espanyol",
+    "away": "Real Sociedad",
+    "kickoff": "2026-05-23 21:00:00",
+    "round": 38,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-374",
+    "home": "Getafe",
+    "away": "Osasuna",
+    "kickoff": "2026-05-23 21:00:00",
+    "round": 38,
+    "home_score": 1,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-375",
+    "home": "Mallorca",
+    "away": "Real Oviedo",
+    "kickoff": "2026-05-23 21:00:00",
+    "round": 38,
+    "home_score": 3,
+    "away_score": 0
+  },
+  {
+    "id": "openfootball-2025-26-376",
+    "home": "Real Madrid",
+    "away": "Athletic Club",
+    "kickoff": "2026-05-23 21:00:00",
+    "round": 38,
+    "home_score": 4,
+    "away_score": 2
+  },
+  {
+    "id": "openfootball-2025-26-377",
+    "home": "Valencia",
+    "away": "FC Barcelona",
+    "kickoff": "2026-05-23 21:00:00",
+    "round": 38,
+    "home_score": 3,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-378",
+    "home": "Girona",
+    "away": "Elche",
+    "kickoff": "2026-05-23 21:00:00",
+    "round": 38,
+    "home_score": 1,
+    "away_score": 1
+  },
+  {
+    "id": "openfootball-2025-26-379",
+    "home": "Villarreal",
+    "away": "Atlético de Madrid",
+    "kickoff": "2026-05-24 21:00:00",
+    "round": 38,
+    "home_score": 5,
+    "away_score": 1
+  }
+]
