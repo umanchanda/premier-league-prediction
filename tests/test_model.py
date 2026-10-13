@@ -1,6 +1,7 @@
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from unittest.mock import patch
 
 from fixtures import Fixture, SportMonksFixtureSource, normalize_sportmonks_fixtures, save_cache
 from model import PremierLeagueModel
@@ -11,6 +12,18 @@ class FixtureNormalizationTests(unittest.TestCase):
         source = SportMonksFixtureSource(api_key="test", season_id=27965, league_id=564)
         self.assertEqual(source.season_id, 27965)
         self.assertEqual(source.league_id, 564)
+
+    def test_empty_sportmonks_response_raises_instead_of_returning_nothing(self):
+        class Response:
+            def raise_for_status(self):
+                pass
+
+            def json(self):
+                return {"message": "No result(s) found", "data": []}
+
+        with patch("requests.get", return_value=Response()):
+            with self.assertRaisesRegex(RuntimeError, "No result"):
+                SportMonksFixtureSource(api_key="test").fetch()
 
     def test_extracts_sportmonks_fixture(self):
         payload = {

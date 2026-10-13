@@ -148,6 +148,11 @@ class SportMonksFixtureSource:
             )
             response.raise_for_status()
             payload = response.json()
+            if page == 1 and not payload.get("data"):
+                # Keep the existing cache rather than overwriting it with nothing,
+                # e.g. when the plan doesn't cover this league.
+                detail = payload.get("message") or "no fixtures returned"
+                raise RuntimeError(f"SportMonks returned no fixtures: {detail}")
             fixtures.extend(normalize_sportmonks_fixtures(payload))
             pagination = payload.get("pagination", {})
             if not pagination.get("has_more", pagination.get("has_more_page", False)):
