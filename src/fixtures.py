@@ -11,8 +11,9 @@ from pathlib import Path
 from typing import Any
 
 SEASON = "2026/2027"
-CACHE_PATH = Path(__file__).parent / "data" / "fixtures-2026-27.json"
-LA_LIGA_CACHE_PATH = Path(__file__).parent / "data" / "la-liga-fixtures-2026-27.json"
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+CACHE_PATH = DATA_DIR / "fixtures-2026-27.json"
+LA_LIGA_CACHE_PATH = DATA_DIR / "la-liga-fixtures-2026-27.json"
 
 SPORTMONKS_URL = "https://api.sportmonks.com/v3/football/fixtures"
 # SportMonks fixture states whose CURRENT score is final.
