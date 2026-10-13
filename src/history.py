@@ -11,9 +11,9 @@ import argparse
 import json
 from pathlib import Path
 
-from fixtures import LEAGUES, Fixture, save_cache
+from fixtures import DATA_DIR, LEAGUES, Fixture, save_cache
 
-HISTORY_DIR = Path(__file__).parent / "data" / "history"
+HISTORY_DIR = DATA_DIR / "history"
 HISTORY_SEASONS = ("2024-25", "2025-26")
 OPENFOOTBALL_URL = "https://raw.githubusercontent.com/openfootball/football.json/master/{season}/{code}.json"
 OPENFOOTBALL_CODES = {"premier-league": "en.1", "la-liga": "es.1"}

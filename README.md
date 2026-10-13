@@ -42,8 +42,8 @@ You can also fetch fixtures directly from the command line. Premier League is
 the default; use `--league la-liga` for the La Liga cache:
 
 ```powershell
-python3 fixtures.py
-python3 fixtures.py --league la-liga
+python3 src/fixtures.py
+python3 src/fixtures.py --league la-liga
 ```
 
 The sync stores `data/fixtures-2026-27.json`, allowing predictions to remain
@@ -61,11 +61,11 @@ the public-domain [openfootball](https://github.com/openfootball/football.json)
 dataset with team names mapped to SportMonks names. Rebuild it with:
 
 ```powershell
-python3 history.py
+python3 src/history.py
 ```
 
 When a new season starts, add the finished season to `HISTORY_SEASONS` in
-`history.py` and drop the oldest, then add any new team names to
+`src/history.py` and drop the oldest, then add any new team names to
 `TEAM_ALIASES`.
 
 ## API
@@ -84,9 +84,9 @@ When a new season starts, add the finished season to `HISTORY_SEASONS` in
 ```powershell
 npm run test
 npm run lint
-python3 backtest.py
+python3 src/backtest.py
 ```
 
-`backtest.py` replays the latest prior season matchday by matchday, using only
+`src/backtest.py` replays the latest prior season matchday by matchday, using only
 results available before each one, and reports RPS (lower is better), result
 accuracy, exact-score rate and points per match. Use it to judge model changes.

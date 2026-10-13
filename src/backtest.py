@@ -4,8 +4,8 @@ Every matchday is predicted using only results from before it, with the older
 history seasons as the starting point, exactly as the live app would have done.
 Lower RPS (ranked probability score) is better.
 
-    python3 backtest.py
-    python3 backtest.py --league la-liga
+    python3 src/backtest.py
+    python3 src/backtest.py --league la-liga
 """
 
 from __future__ import annotations

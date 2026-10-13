@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-import os
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
@@ -147,6 +147,7 @@ def prediction_heatmap(
     }
 
 
-if os.path.isdir("frontend/dist"):
+FRONTEND_DIST = Path(__file__).resolve().parent.parent / "frontend" / "dist"
+if FRONTEND_DIST.is_dir():
     from fastapi.staticfiles import StaticFiles
-    app.mount("/", StaticFiles(directory="frontend/dist", html=True), name="static")
+    app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="static")
